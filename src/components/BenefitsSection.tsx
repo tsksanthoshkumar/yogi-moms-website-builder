@@ -49,9 +49,9 @@ const BenefitsSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
-            <Card key={index} className="premium-card border-0 shadow-gentle hover:shadow-floating transition-all duration-500 transform-gpu">
+            <Card key={index} className="border-0 shadow-gentle hover:shadow-card transition-shadow duration-300">
               <CardContent className="p-6 text-center">
-                <div className="text-4xl mb-4 floating-element" style={{animationDelay: `${index * 0.2}s`}}>{benefit.icon}</div>
+                <div className="text-4xl mb-4">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">{benefit.title}</h3>
                 <p className="text-muted-foreground">{benefit.description}</p>
               </CardContent>

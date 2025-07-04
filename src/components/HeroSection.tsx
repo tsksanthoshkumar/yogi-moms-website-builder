@@ -15,11 +15,11 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left space-y-6">
-            <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight yoga-breathe">
+            <h1 className="text-4xl lg:text-6xl font-bold text-foreground leading-tight">
               Empower Your Pregnancy with{' '}
-              <span className="text-primary trust-badge bg-clip-text text-transparent">Gentle Yoga</span>
+              <span className="text-primary">Gentle Yoga</span>
             </h1>
-            <p className="text-lg lg:text-xl text-muted-foreground max-w-xl floating-element">
+            <p className="text-lg lg:text-xl text-muted-foreground max-w-xl">
               Daily guided yoga sessions designed to nurture both mother and baby – safely, from your home. 
               Join thousands of Indian mothers on their wellness journey.
             </p>
@@ -28,7 +28,7 @@ const HeroSection = () => {
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-6">
               <div className="flex items-center bg-primary/10 px-4 py-2 rounded-full">
                 <span className="text-green-500 mr-2">✓</span>
-                <span className="text-sm font-medium">Certified Instructors</span>
+                <span className="text-sm font-medium">Lifetime Access</span>
               </div>
               <div className="flex items-center bg-primary/10 px-4 py-2 rounded-full">
                 <span className="text-green-500 mr-2">✓</span>
@@ -44,7 +44,7 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 onClick={scrollToPricing}
-                className="px-8 py-6 text-lg shadow-floating hover:shadow-glow transform hover:scale-105 transition-all duration-300 trust-badge"
+                className="px-8 py-6 text-lg shadow-gentle hover:shadow-card transition-shadow"
               >
                 Start Your Journey
               </Button>
@@ -52,7 +52,7 @@ const HeroSection = () => {
                 variant="outline" 
                 size="lg"
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 py-6 text-lg premium-card border-2 hover:border-primary/50"
+                className="px-8 py-6 text-lg"
               >
                 Learn More
               </Button>
@@ -72,19 +72,13 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-          <div className="relative parallax-container">
-            <div className="absolute inset-0 bg-gradient-mesh rounded-3xl opacity-30 parallax-layer"></div>
-            <div className="absolute inset-0 bg-gradient-glow rounded-3xl opacity-50 yoga-float"></div>
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-soft-pink to-gentle-blue rounded-3xl opacity-20"></div>
             <img 
               src={heroImage} 
               alt="Pregnant woman doing yoga" 
-              className="w-full h-auto rounded-3xl shadow-premium relative z-10 yoga-float transform-gpu backface-hidden"
+              className="w-full h-auto rounded-3xl shadow-card relative z-10"
             />
-            
-            {/* Floating Elements */}
-            <div className="absolute -top-4 -left-4 w-20 h-20 bg-primary/20 rounded-full floating-element blur-sm"></div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gentle-blue/30 rounded-full floating-element blur-md" style={{animationDelay: '1s'}}></div>
-            <div className="absolute top-1/3 -right-8 w-16 h-16 bg-soft-pink/40 rounded-full floating-element blur-sm" style={{animationDelay: '2s'}}></div>
           </div>
         </div>
       </div>

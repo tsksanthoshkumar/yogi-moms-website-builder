@@ -74,9 +74,6 @@ export default {
 			boxShadow: {
 				'gentle': 'var(--shadow-gentle)',
 				'card': 'var(--shadow-card)',
-				'premium': 'var(--shadow-premium)',
-				'floating': 'var(--shadow-floating)',
-				'glow': 'var(--glow-effect)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
