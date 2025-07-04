@@ -22,7 +22,7 @@ const PricingSection = () => {
         </div>
 
         <div className="max-w-md mx-auto">
-          <Card className="border-2 border-primary shadow-card relative overflow-hidden">
+          <Card className="premium-card border-2 border-primary shadow-premium relative overflow-hidden pulse-glow">
             <div className="absolute top-0 left-0 right-0 bg-primary text-primary-foreground text-center py-2">
               <Badge variant="secondary" className="bg-primary-foreground text-primary">
                 Most Popular
@@ -34,8 +34,8 @@ const PricingSection = () => {
                 Full Prenatal Yoga Journey
               </CardTitle>
               <div className="mt-4">
-                <div className="text-4xl font-bold text-primary">₹499</div>
-                <div className="text-sm text-muted-foreground line-through">₹1999</div>
+                <div className="text-4xl font-bold text-primary pulse-glow">₹1999</div>
+                <div className="text-sm text-muted-foreground line-through">₹3999</div>
                 <div className="text-sm text-muted-foreground mt-1">
                   One-time payment • Lifetime access
                 </div>
@@ -76,10 +76,10 @@ const PricingSection = () => {
 
               <Button 
                 size="lg" 
-                className="w-full mt-6 py-6 text-lg shadow-gentle hover:shadow-card transition-shadow"
+                className="w-full mt-6 py-6 text-lg shadow-floating hover:shadow-glow transform hover:scale-105 transition-all duration-300 trust-badge"
                 onClick={handleBuyNow}
               >
-                Buy Now - ₹499
+                Buy Now - ₹1999
               </Button>
               
               <p className="text-xs text-center text-muted-foreground mt-4">
