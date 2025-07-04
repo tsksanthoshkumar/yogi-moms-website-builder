@@ -1,15 +1,33 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
+    setIsMenuOpen(false);
+  };
+
+  const handleNavigation = (path: string) => {
+    navigate(path);
     setIsMenuOpen(false);
   };
 
@@ -17,7 +35,7 @@ const Navigation = () => {
     <nav className="bg-background/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 border-b border-border">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-bold text-xl text-primary">
+          <div className="font-bold text-xl text-primary cursor-pointer" onClick={() => navigate('/')}>
             PrenatalYoga
           </div>
           
@@ -25,6 +43,9 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-8">
             <button onClick={() => scrollToSection('home')} className="text-foreground hover:text-primary transition-colors">
               Home
+            </button>
+            <button onClick={() => handleNavigation('/yoga-exercises')} className="text-foreground hover:text-primary transition-colors">
+              Yoga & Exercises
             </button>
             <button onClick={() => scrollToSection('about')} className="text-foreground hover:text-primary transition-colors">
               About
@@ -60,6 +81,9 @@ const Navigation = () => {
             <div className="flex flex-col space-y-4 pt-4">
               <button onClick={() => scrollToSection('home')} className="text-left text-foreground hover:text-primary transition-colors">
                 Home
+              </button>
+              <button onClick={() => handleNavigation('/yoga-exercises')} className="text-left text-foreground hover:text-primary transition-colors">
+                Yoga & Exercises
               </button>
               <button onClick={() => scrollToSection('about')} className="text-left text-foreground hover:text-primary transition-colors">
                 About
