@@ -29,9 +29,17 @@ const HeroSection = () => {
             </h1>
             
             <p className="text-xl lg:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
-              Join <span className="font-semibold text-primary">10,000+ Indian mothers</span> who discovered the secret to a 
+              Join <span className="font-semibold text-primary">5,000+ mothers</span> who discovered the secret to a 
               <span className="font-semibold"> healthier, happier pregnancy</span> through our scientifically-designed yoga program.
             </p>
+
+            {/* Star Rating */}
+            <div className="flex items-center justify-center lg:justify-start space-x-2">
+              <div className="flex text-yellow-400 text-lg">
+                ★ ★ ★ ★☆
+              </div>
+              <span className="text-muted-foreground text-sm">(4.0) Based on real reviews from new moms across India</span>
+            </div>
 
             {/* Social Proof */}
             <div className="flex items-center justify-center lg:justify-start space-x-2 text-sm">
@@ -42,7 +50,7 @@ const HeroSection = () => {
                 <div className="w-8 h-8 rounded-full bg-accent/30 border-2 border-background"></div>
               </div>
               <span className="text-muted-foreground">
-                <span className="font-semibold text-foreground">2,847 mothers</span> joined this week
+                <span className="font-semibold text-foreground">279 mothers</span> joined this week
               </span>
             </div>
             
@@ -58,7 +66,7 @@ const HeroSection = () => {
               <div className="flex items-center bg-gradient-to-r from-accent/5 to-accent/10 px-4 py-3 rounded-xl border border-accent/20">
                 <span className="text-green-500 mr-3 text-lg">✓</span>
                 <div className="text-left">
-                  <div className="text-sm font-semibold text-foreground">Doctor Approved</div>
+                  <div className="text-sm font-semibold text-foreground">For Natural Birth exercises</div>
                   <div className="text-xs text-muted-foreground">100% Safe</div>
                 </div>
               </div>
@@ -91,15 +99,11 @@ const HeroSection = () => {
                 </Button>
               </div>
               
-              {/* Urgency & Guarantee */}
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 text-sm">
+              {/* Urgency */}
+              <div className="flex items-center justify-center lg:justify-start text-sm">
                 <div className="flex items-center text-primary">
                   <span className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse"></span>
                   <span className="font-medium">347 spots left at this price</span>
-                </div>
-                <div className="flex items-center text-muted-foreground">
-                  <span className="mr-2">🛡️</span>
-                  <span>30-day money-back guarantee</span>
                 </div>
               </div>
             </div>
@@ -107,13 +111,13 @@ const HeroSection = () => {
             {/* Enhanced Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border/50">
               <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">10,000+</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">5,000+</div>
                 <div className="text-sm text-muted-foreground">Happy Mothers</div>
               </div>
               <div className="text-center lg:text-left">
                 <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">₹1999</div>
                 <div className="text-sm text-muted-foreground">
-                  <span className="line-through text-muted-foreground/60">₹3999</span> One-time
+                  <span className="line-through text-muted-foreground/60">₹3999</span> One-Time Payment
                 </div>
               </div>
               <div className="text-center lg:text-left">

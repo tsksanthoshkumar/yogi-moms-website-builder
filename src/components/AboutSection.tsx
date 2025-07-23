@@ -32,7 +32,7 @@ const AboutSection = () => {
               <ul className="space-y-2 text-muted-foreground">
                 <li>✨ Designed specifically for Indian women</li>
                 <li>✨ Culturally sensitive approach to wellness</li>
-                <li>✨ Affordable one-time payment model</li>
+                <li>✨ Affordable One-Time Payment model</li>
                 <li>✨ Husband-inclusive activities</li>
                 <li>✨ Community support through WhatsApp groups</li>
               </ul>

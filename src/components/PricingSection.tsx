@@ -17,7 +17,7 @@ const PricingSection = () => {
             Start Your Journey Today
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            One-time payment for lifetime access to your complete prenatal yoga program
+            One-Time Payment for lifetime access to your complete prenatal yoga program
           </p>
         </div>
 
@@ -37,7 +37,7 @@ const PricingSection = () => {
                 <div className="text-4xl font-bold text-primary">₹1999</div>
                 <div className="text-sm text-muted-foreground line-through">₹3999</div>
                 <div className="text-sm text-muted-foreground mt-1">
-                  One-time payment • Lifetime access
+                  One-Time Payment • Lifetime access
                 </div>
               </div>
             </CardHeader>
@@ -83,7 +83,7 @@ const PricingSection = () => {
               </Button>
               
               <p className="text-xs text-center text-muted-foreground mt-4">
-                Secure payment via Razorpay/Paytm • 30-day money-back guarantee
+                Secure payment via Razorpay/Paytm
               </p>
             </CardContent>
           </Card>
@@ -94,10 +94,6 @@ const PricingSection = () => {
             <div className="flex items-center">
               <span className="text-green-500 mr-2">🔒</span>
               Secure Payment
-            </div>
-            <div className="flex items-center">
-              <span className="text-green-500 mr-2">↩️</span>
-              Money-back Guarantee
             </div>
             <div className="flex items-center">
               <span className="text-green-500 mr-2">📱</span>
