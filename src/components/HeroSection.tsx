@@ -1,6 +1,10 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-yoga.jpg";
+import indianWoman1 from "@/assets/indian-woman-1.jpg";
+import indianWoman2 from "@/assets/indian-woman-2.jpg";
+import indianWoman3 from "@/assets/indian-woman-3.jpg";
+import indianWoman4 from "@/assets/indian-woman-4.jpg";
 
 const HeroSection = () => {
   const scrollToPricing = () => {
@@ -21,36 +25,29 @@ const HeroSection = () => {
             </div>
             
             <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
-              Transform Your{' '}
+              For You, For Baby:{' '}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Pregnancy Journey
+                Unlocking a Beautiful
               </span>{' '}
-              with Expert Yoga
+              Pregnancy Experience
             </h1>
             
             <p className="text-xl lg:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
-              Join <span className="font-semibold text-primary">5,000+ mothers</span> who discovered the secret to a 
+              Join <span className="font-semibold text-primary">10,000+ mothers</span> who discovered the secret to a 
               <span className="font-semibold"> healthier, happier pregnancy</span> through our scientifically-designed yoga program.
             </p>
 
-            {/* Star Rating */}
-            <div className="flex items-center justify-center lg:justify-start space-x-2">
-              <div className="flex text-yellow-400 text-lg">
-                ★ ★ ★ ★☆
-              </div>
-              <span className="text-muted-foreground text-sm">(4.0) Based on real reviews from new moms across India</span>
-            </div>
 
             {/* Social Proof */}
             <div className="flex items-center justify-center lg:justify-start space-x-2 text-sm">
               <div className="flex -space-x-2">
-                <div className="w-8 h-8 rounded-full bg-primary/20 border-2 border-background"></div>
-                <div className="w-8 h-8 rounded-full bg-accent/20 border-2 border-background"></div>
-                <div className="w-8 h-8 rounded-full bg-primary/30 border-2 border-background"></div>
-                <div className="w-8 h-8 rounded-full bg-accent/30 border-2 border-background"></div>
+                <img src={indianWoman1} alt="Happy mother" className="w-8 h-8 rounded-full border-2 border-background object-cover" />
+                <img src={indianWoman2} alt="Happy mother" className="w-8 h-8 rounded-full border-2 border-background object-cover" />
+                <img src={indianWoman3} alt="Happy mother" className="w-8 h-8 rounded-full border-2 border-background object-cover" />
+                <img src={indianWoman4} alt="Happy mother" className="w-8 h-8 rounded-full border-2 border-background object-cover" />
               </div>
               <span className="text-muted-foreground">
-                <span className="font-semibold text-foreground">279 mothers</span> joined this week
+                <span className="font-semibold text-foreground">729+ mothers</span> joined this week
               </span>
             </div>
             
@@ -92,10 +89,10 @@ const HeroSection = () => {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => document.getElementById('program')?.scrollIntoView({ behavior: 'smooth' })}
                   className="px-8 py-6 text-lg border-2 hover:bg-primary/5"
                 >
-                  Watch Preview
+                  What's Inside the Course
                 </Button>
               </div>
               

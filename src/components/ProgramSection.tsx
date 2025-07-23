@@ -42,12 +42,14 @@ const programContent = [
 ];
 
 const bonusContent = [
-  "📖 Comprehensive PDF guides for each trimester",
-  "🎥 High-quality video demonstrations", 
-  "🍎 Nutrition plans for healthy pregnancy",
-  "👫 Partner yoga sessions for couples",
-  "💬 WhatsApp community support group",
-  "📱 Mobile-friendly content for easy access"
+  "🍽️ Specialised Diet Plans (Month-by-Month) - Separate plans for North Indian and South Indian cuisine with Vegetarian and Non-Vegetarian options",
+  "👨 Husband Support Guide - Step-by-step guide for husbands with communication tips, emotional support, and involvement advice",
+  "🏠 5 Daily Care & Household Activity Guides for Husbands - Light, loving ways to help daily (cleaning, cooking, massage, fun games etc.)",
+  "❓ FAQ Guide for Pregnant Women & Husbands - Common doubts, expert tips, and clear answers for each stage",
+  "✅ Dos & Don'ts for Moms-to-Be - Simplified trimester-based list covering food, movement, health, and sleep",
+  "🌸 Trimester-by-Trimester Wellness Guide - Self-care routines for each trimester",
+  "📚 Pregnancy eBook - All essential information in one downloadable eBook",
+  "📔 Special Pregnancy Journal - A guided space for daily memories, thoughts, and milestones"
 ];
 
 const ProgramSection = () => {
