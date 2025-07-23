@@ -8,6 +8,7 @@ import ProgramSection from "@/components/ProgramSection";
 import PricingSection from "@/components/PricingSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
       <PricingSection />
       <ContactSection />
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 };

@@ -50,8 +50,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Support</h4>
             <ul className="space-y-2 text-background/80">
-              <li>📧 support@prenatalyoga.com</li>
-              <li>📱 +91 98765 43210</li>
+              <li>📧 prenatlyogaa@gmail.com</li>
               <li>💬 WhatsApp Support</li>
               <li>🕒 Mon-Sat: 9AM-6PM</li>
             </ul>

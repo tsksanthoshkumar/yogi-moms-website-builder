@@ -19,6 +19,18 @@ const testimonials = [
     location: "Bangalore",
     text: "The weekly program was perfect for my schedule. I loved how it adapted to each trimester. Even my husband joined for some sessions!",
     rating: "⭐⭐⭐⭐⭐"
+  },
+  {
+    name: "Meera Patel",
+    location: "Ahmedabad",
+    text: "Good course overall. The yoga poses were helpful and the diet plans were informative. Some sessions could have been more detailed but worth the price.",
+    rating: "⭐⭐⭐⭐"
+  },
+  {
+    name: "Sunita Roy",
+    location: "Kolkata",
+    text: "Wonderful experience! The pregnancy journal helped me document my journey beautifully. The husband support guide made my partner more involved too.",
+    rating: "⭐⭐⭐⭐⭐"
   }
 ];
 

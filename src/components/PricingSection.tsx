@@ -70,6 +70,14 @@ const PricingSection = () => {
                 </div>
                 <div className="flex items-center text-sm">
                   <span className="text-green-500 mr-3">✓</span>
+                  <span>Pregnancy journal included</span>
+                </div>
+                <div className="flex items-center text-sm">
+                  <span className="text-green-500 mr-3">✓</span>
+                  <span>Lifetime access</span>
+                </div>
+                <div className="flex items-center text-sm">
+                  <span className="text-green-500 mr-3">✓</span>
                   <span>24/7 course access</span>
                 </div>
               </div>
