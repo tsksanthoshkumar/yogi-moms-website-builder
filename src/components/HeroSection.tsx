@@ -41,10 +41,10 @@ const HeroSection = () => {
             {/* Social Proof */}
             <div className="flex items-center justify-center lg:justify-start space-x-2 text-sm">
               <div className="flex -space-x-2">
-                <img src={indianWoman1} alt="Happy mother" className="w-8 h-8 rounded-full border-2 border-background object-cover" />
-                <img src={indianWoman2} alt="Happy mother" className="w-8 h-8 rounded-full border-2 border-background object-cover" />
-                <img src={indianWoman3} alt="Happy mother" className="w-8 h-8 rounded-full border-2 border-background object-cover" />
-                <img src={indianWoman4} alt="Happy mother" className="w-8 h-8 rounded-full border-2 border-background object-cover" />
+                <img src={indianWoman1} alt="Happy mother" className="w-8 h-8 rounded-full border-2 border-background object-cover object-center" />
+                <img src={indianWoman2} alt="Happy mother" className="w-8 h-8 rounded-full border-2 border-background object-cover object-center" />
+                <img src={indianWoman3} alt="Happy mother" className="w-8 h-8 rounded-full border-2 border-background object-cover object-center" />
+                <img src={indianWoman4} alt="Happy mother" className="w-8 h-8 rounded-full border-2 border-background object-cover object-center" />
               </div>
               <span className="text-muted-foreground">
                 <span className="font-semibold text-foreground">729+ mothers</span> joined this week
