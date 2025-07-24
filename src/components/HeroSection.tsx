@@ -21,11 +21,11 @@ const HeroSection = () => {
             </div>
             
             <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
-              For You, For Baby:{' '}
+              For You, For Baby{' '}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Unlocking a Beautiful
+                Transform your pregnancy journey
               </span>{' '}
-              Pregnancy Experience
+              with yoga
             </h1>
             
             <p className="text-xl lg:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
