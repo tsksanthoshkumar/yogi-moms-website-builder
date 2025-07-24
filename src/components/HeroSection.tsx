@@ -15,17 +15,6 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left space-y-8">
-            {/* Logo */}
-            <div className="flex justify-center lg:justify-start">
-              <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-primary/20 shadow-gentle">
-                <img 
-                  src="/lovable-uploads/b314d0c6-c857-4293-b9a3-5d01250039d7.png" 
-                  alt="PrenatalMom Logo" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-            
             {/* Announcement Banner */}
             <div className="inline-flex items-center bg-gradient-to-r from-primary/10 to-accent/10 px-4 py-2 rounded-full border border-primary/20">
               <span className="text-primary font-medium text-sm">🌟 Limited Time: Save ₹2000 Today!</span>
@@ -133,8 +122,8 @@ const HeroSection = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-soft-pink to-gentle-blue rounded-3xl opacity-20"></div>
             <img 
-              src="/lovable-uploads/57fb6bb9-7080-4fc8-8bb4-fcfed77a222e.png" 
-              alt="Pregnant woman yoga instructor" 
+              src={heroImage} 
+              alt="Pregnant woman doing yoga" 
               className="w-full h-auto rounded-3xl shadow-card relative z-10"
             />
           </div>

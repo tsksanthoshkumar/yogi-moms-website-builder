@@ -120,17 +120,9 @@ const ContactSection = () => {
                   variant="default" 
                   size="lg"
                   onClick={handleWhatsApp}
-                  className="w-full mb-4"
-                >
-                  Chat on WhatsApp
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  onClick={() => window.open('https://www.instagram.com/prenatalmoms?igsh=OGx3ZXNnb3JhaTA=', '_blank')}
                   className="w-full"
                 >
-                  Follow on Instagram
+                  Chat on WhatsApp
                 </Button>
               </CardContent>
             </Card>
