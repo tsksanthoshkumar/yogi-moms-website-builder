@@ -36,7 +36,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="font-bold text-xl text-primary cursor-pointer" onClick={() => navigate('/')}>
-            PrenatalYoga
+            PrenatalMom
           </div>
           
           {/* Desktop Menu */}
