@@ -1,10 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-yoga.jpg";
-import indianWoman1 from "@/assets/indian-woman-1.jpg";
-import indianWoman2 from "@/assets/indian-woman-2.jpg";
-import indianWoman3 from "@/assets/indian-woman-3.jpg";
-import indianWoman4 from "@/assets/indian-woman-4.jpg";
 
 const HeroSection = () => {
   const scrollToPricing = () => {
@@ -41,10 +37,10 @@ const HeroSection = () => {
             {/* Social Proof */}
             <div className="flex items-center justify-center lg:justify-start space-x-2 text-sm">
               <div className="flex -space-x-2">
-                <img src={indianWoman1} alt="Happy mother" className="w-8 h-8 rounded-full border-2 border-background object-cover object-center" />
-                <img src={indianWoman2} alt="Happy mother" className="w-8 h-8 rounded-full border-2 border-background object-cover object-center" />
-                <img src={indianWoman3} alt="Happy mother" className="w-8 h-8 rounded-full border-2 border-background object-cover object-center" />
-                <img src={indianWoman4} alt="Happy mother" className="w-8 h-8 rounded-full border-2 border-background object-cover object-center" />
+                <img src="/lovable-uploads/f8fd8ae7-b7ca-44f8-9b30-a286173dfc21.png" alt="Happy mother" className="w-8 h-8 rounded-full border-2 border-background object-cover object-center" />
+                <img src="/lovable-uploads/5a2b783b-a806-441d-b582-bae1316b4511.png" alt="Happy mother" className="w-8 h-8 rounded-full border-2 border-background object-cover object-center" />
+                <img src="/lovable-uploads/9faa43c8-9c7b-498d-9c5f-2f4b734856d1.png" alt="Happy mother" className="w-8 h-8 rounded-full border-2 border-background object-cover object-center" />
+                <img src="/lovable-uploads/d7f9fe46-3d7b-4786-a290-6b40eae24950.png" alt="Happy mother" className="w-8 h-8 rounded-full border-2 border-background object-cover object-center" />
               </div>
               <span className="text-muted-foreground">
                 <span className="font-semibold text-foreground">729+ mothers</span> joined this week
