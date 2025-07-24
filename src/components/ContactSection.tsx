@@ -34,84 +34,13 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Need Help? We're Here for You
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Have questions about our prenatal yoga program? Our yoga mentors are ready to assist you
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
-          <Card className="shadow-gentle">
-            <CardHeader>
-              <CardTitle className="text-2xl text-foreground">Send us a Message</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-2">
-                  <Label htmlFor="name">Full Name</Label>
-                  <Input 
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    placeholder="Enter your full name"
-                    required
-                  />
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="phone">Phone Number</Label>
-                  <Input 
-                    id="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                    placeholder="Enter your phone number"
-                    required
-                  />
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email Address</Label>
-                  <Input 
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    placeholder="Enter your email address"
-                    required
-                  />
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea 
-                    id="message"
-                    value={formData.message}
-                    onChange={(e) => setFormData({...formData, message: e.target.value})}
-                    placeholder="Tell us how we can help you..."
-                    rows={4}
-                    required
-                  />
-                </div>
-                
-                <Button type="submit" size="lg" className="w-full">
-                  Send Message
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
-
-          {/* Quick Contact Options */}
-          <div className="space-y-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <Card className="shadow-gentle bg-gentle-blue border-0">
               <CardContent className="p-8 text-center">
                 <div className="text-4xl mb-4">💬</div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">
-                  Chat with Our Yoga Mentor
+                  Support
                 </h3>
                 <p className="text-muted-foreground mb-6">
                   Get instant answers to your questions via WhatsApp
@@ -124,7 +53,7 @@ const ContactSection = () => {
                 >
                   Chat on WhatsApp
                 </Button>
-                <div className="border-t pt-4">
+                <div className="border-t pt-4 space-y-3">
                   <p className="text-sm text-muted-foreground mb-2">Follow us for daily tips:</p>
                   <Button 
                     variant="outline" 
@@ -134,6 +63,9 @@ const ContactSection = () => {
                   >
                     📸 Instagram
                   </Button>
+                  <div className="text-xs text-muted-foreground pt-2">
+                    <p>By purchasing, you agree to our Terms of Use and Refund Policy</p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
