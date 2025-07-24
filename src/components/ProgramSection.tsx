@@ -60,9 +60,15 @@ const ProgramSection = () => {
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
             What's Inside the Course
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
             A comprehensive week-by-week program that grows with you throughout your pregnancy journey
           </p>
+          <div className="space-y-2 text-muted-foreground max-w-3xl mx-auto">
+            <p>Available in Hindi and English languages.</p>
+            <p>Learn at your own pace, anytime, anywhere.</p>
+            <p>Fit yoga into your busy schedule – perfect for new mothers and expectant moms.</p>
+            <p>Access soothing prenatal yoga whenever you need it most, whether it's early morning or late evening.</p>
+          </div>
         </div>
 
         {/* Program Content */}
