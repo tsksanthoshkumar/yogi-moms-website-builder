@@ -35,8 +35,15 @@ const Navigation = () => {
     <nav className="bg-background/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 border-b border-border">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-bold text-xl text-primary cursor-pointer" onClick={() => navigate('/')}>
-            PrenatalYoga
+          <div className="flex items-center space-x-2 cursor-pointer" onClick={() => navigate('/')}>
+            <img 
+              src="/lovable-uploads/86701dd5-d52f-4fed-9baa-a7fea1be56c1.png" 
+              alt="PrenatalYoga Logo" 
+              className="w-10 h-10"
+            />
+            <span className="font-bold text-xl text-primary">
+              PrenatalYoga
+            </span>
           </div>
           
           {/* Desktop Menu */}

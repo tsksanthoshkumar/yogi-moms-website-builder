@@ -1,5 +1,5 @@
 import React from 'react';
-import founderImage from "@/assets/founder.jpg";
+// Using uploaded image instead of founder.jpg
 
 const AboutSection = () => {
   return (
@@ -40,7 +40,7 @@ const AboutSection = () => {
           </div>
           <div className="order-1 lg:order-2 text-center">
             <img 
-              src={founderImage} 
+              src="/lovable-uploads/a7cc4eb2-e3a5-48c2-8eb4-4600d8373239.png" 
               alt="Yoga instructor and founder" 
               className="w-80 h-80 rounded-full mx-auto shadow-card object-cover"
             />
