@@ -1,7 +1,5 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Link } from 'react-router-dom';
 
 const ContactSection = () => {
 
@@ -39,15 +37,6 @@ const ContactSection = () => {
                     Just a yoga mat and comfortable clothing. All exercises can be done at home with basic equipment.
                   </p>
                 </div>
-              </div>
-              
-              <div className="border-t pt-6 mt-6 text-center">
-                <p className="text-xs text-muted-foreground mb-3">
-                  By purchasing, you agree to our{' '}
-                  <Link to="/terms-of-service" className="text-xs underline hover:text-foreground">
-                    Terms of Use & Privacy Policy
-                  </Link>
-                </p>
               </div>
             </CardContent>
           </Card>
