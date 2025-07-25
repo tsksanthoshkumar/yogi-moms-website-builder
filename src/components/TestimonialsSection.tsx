@@ -76,7 +76,7 @@ const TestimonialsSection = () => {
                         <img 
                           src={testimonial.image} 
                           alt={testimonial.name}
-                          className="w-24 h-24 rounded-full object-cover border-4 border-white shadow-md mr-4"
+                          className="w-16 h-16 rounded-full object-cover border-4 border-white shadow-md mr-4"
                         />
                         <div>
                           <h4 className="font-bold text-lg text-foreground">
