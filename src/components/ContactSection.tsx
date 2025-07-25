@@ -107,36 +107,6 @@ const ContactSection = () => {
 
           {/* Quick Contact Options */}
           <div className="space-y-8">
-            <Card className="shadow-gentle bg-gentle-blue border-0">
-              <CardContent className="p-8 text-center">
-                <div className="text-4xl mb-4">💬</div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
-                  Chat with Our Yoga Mentor
-                </h3>
-                <p className="text-muted-foreground mb-6">
-                  Get instant answers to your questions via WhatsApp
-                </p>
-                <Button 
-                  variant="default" 
-                  size="lg"
-                  onClick={handleWhatsApp}
-                  className="w-full mb-4"
-                >
-                  Chat on WhatsApp
-                </Button>
-                <div className="border-t pt-4">
-                  <p className="text-sm text-muted-foreground mb-2">Follow us for daily tips:</p>
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    onClick={() => window.open('https://www.instagram.com/prenatalmoms?igsh=OGx3ZXNnb3JhaTA=', '_blank')}
-                    className="w-full"
-                  >
-                    📸 Instagram
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
 
             <Card className="shadow-gentle">
               <CardContent className="p-8">
