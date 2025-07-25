@@ -63,13 +63,13 @@ const Footer = () => {
               © 2024 PrenatalYoga. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-background/60 hover:text-background text-sm transition-colors">
+              <a href="/terms-of-service#privacy-policy" className="text-background/60 hover:text-background text-sm transition-colors">
                 Privacy Policy
               </a>
               <a href="/terms-of-service" className="text-background/60 hover:text-background text-sm transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="text-background/60 hover:text-background text-sm transition-colors">
+              <a href="/terms-of-service#refund-policy" className="text-background/60 hover:text-background text-sm transition-colors">
                 Refund Policy
               </a>
             </div>

@@ -30,7 +30,7 @@ const TermsOfService = () => {
         <div className="max-w-4xl mx-auto prose prose-lg">
           
           {/* Privacy Policy Section */}
-          <div className="mb-12 p-8 bg-card rounded-lg shadow-gentle">
+          <div id="privacy-policy" className="mb-12 p-8 bg-card rounded-lg shadow-gentle">
             <h2 className="text-2xl font-bold text-foreground mb-6">Privacy Policy (Summary)</h2>
             <div className="text-muted-foreground space-y-4">
               <p>
@@ -99,7 +99,7 @@ const TermsOfService = () => {
           </div>
 
           {/* Refund Policy Section */}
-          <div className="mb-12 p-8 bg-card rounded-lg shadow-gentle">
+          <div id="refund-policy" className="mb-12 p-8 bg-card rounded-lg shadow-gentle">
             <h2 className="text-2xl font-bold text-foreground mb-6">Refund Policy</h2>
             <div className="text-muted-foreground space-y-4">
               <h3 className="text-xl font-semibold text-foreground mb-3">Non-tangible irrevocable goods ("Digital products")</h3>
