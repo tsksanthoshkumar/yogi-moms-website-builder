@@ -31,57 +31,69 @@ const TermsOfService = () => {
           
           {/* Privacy Policy Section */}
           <div className="mb-12 p-8 bg-card rounded-lg shadow-gentle">
-            <h2 className="text-2xl font-bold text-foreground mb-6">Privacy Policy</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-6">Privacy Policy (Summary)</h2>
             <div className="text-muted-foreground space-y-4">
               <p>
-                This Privacy Policy outlines how we collect, use, store, and share your personal information when you use our platform. By using the platform, you agree to the terms in this policy. If you do not agree, please stop using the platform immediately.
+                This Privacy Policy explains how we collect, use, and protect your personal information when you use our platform. By using our services, you agree to the practices described below.
               </p>
               
               <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">What We Collect</h3>
+              <p>We may collect:</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li><strong>Personal Information:</strong> Name, email, age, gender, location, phone number, etc.</li>
-                <li><strong>Sensitive Information:</strong> Passwords, health data, official IDs (like Aadhaar), etc.</li>
-                <li><strong>Non-Personal Data:</strong> Browser type, device info, cookies, etc.</li>
+                <li><strong>Personal Information:</strong> Name, email, phone number, etc.</li>
+                <li><strong>Sensitive Information:</strong> Only when necessary (e.g. for support or legal compliance).</li>
+                <li><strong>Non-personal Data:</strong> Browser info, device data, and cookies.</li>
               </ul>
 
-              <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">How We Use Your Information</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">How We Use Your Data</h3>
+              <p>We use your data to:</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>To provide and improve services</li>
-                <li>To communicate with you</li>
-                <li>To enhance platform security</li>
-                <li>To comply with legal obligations</li>
+                <li>Provide and improve our services</li>
+                <li>Respond to inquiries and support requests</li>
+                <li>Prevent fraud or misuse</li>
+                <li>Send you relevant updates (you can opt out anytime)</li>
               </ul>
 
-              <p>
-                We do not sell your data. Data may be shared with trusted partners only when necessary (e.g., payment processors, legal requests).
-              </p>
+              <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Data Sharing</h3>
+              <p>We do not sell your personal data. We may share it with:</p>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Trusted partners to operate the platform</li>
+                <li>Authorities if required by law</li>
+              </ul>
 
-              <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Your Choices & Rights</h3>
+              <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Your Rights</h3>
               <p>You can:</p>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Access, update, or delete your data</li>
-                <li>Limit what you share</li>
-                <li>Opt out of marketing</li>
-                <li>Control cookie settings</li>
+                <li>Access, correct, or delete your information</li>
+                <li>Limit or opt-out of marketing emails</li>
+                <li>Disable cookies through your browser</li>
               </ul>
+              <p>Some rights depend on where you live (India, EU/EEA, UK, California, etc.).</p>
 
+              <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Data Security</h3>
               <p>
-                Depending on your region (India, EU, UK, USA), you may have specific legal rights like data portability, correction, erasure, and objection to processing.
-              </p>
-
-              <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Data Storage & Security</h3>
-              <p>
-                Your data is stored securely (mostly in India via AWS) and retained only as long as necessary. We use reasonable measures to prevent unauthorized access or misuse.
+                We take appropriate security measures to protect your data from unauthorized access, alteration, or loss.
               </p>
 
               <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Third-Party Links</h3>
               <p>
-                We're not responsible for the privacy practices of third-party sites linked on our platform.
+                We may link to other sites we don't control. Please read their privacy policies separately.
+              </p>
+
+              <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Cross-Border Transfers</h3>
+              <p>
+                Your data may be stored or processed in India or other countries. By using our platform, you consent to this.
               </p>
 
               <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Policy Updates</h3>
               <p>
-                We may update this policy from time to time. Please check the latest version on our platform.
+                We may update this policy as needed. Please check back periodically for the latest version.
+              </p>
+
+              <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Contact Us</h3>
+              <p>
+                If you have questions or concerns, contact us at:<br />
+                📧 prenatlyogaa@gmail.com
               </p>
             </div>
           </div>
