@@ -66,7 +66,7 @@ const Footer = () => {
               <a href="#" className="text-background/60 hover:text-background text-sm transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-background/60 hover:text-background text-sm transition-colors">
+              <a href="/terms-of-service" className="text-background/60 hover:text-background text-sm transition-colors">
                 Terms of Service
               </a>
               <a href="#" className="text-background/60 hover:text-background text-sm transition-colors">
