@@ -98,6 +98,27 @@ const TermsOfService = () => {
             </div>
           </div>
 
+          {/* Refund Policy Section */}
+          <div className="mb-12 p-8 bg-card rounded-lg shadow-gentle">
+            <h2 className="text-2xl font-bold text-foreground mb-6">Refund Policy</h2>
+            <div className="text-muted-foreground space-y-4">
+              <h3 className="text-xl font-semibold text-foreground mb-3">Non-tangible irrevocable goods ("Digital products")</h3>
+              <p>
+                We do not issue refunds for non-tangible irrevocable goods ("digital products") once the order is confirmed and the product is sent.
+              </p>
+              
+              <p>
+                We recommend contacting us for assistance if you experience any issues receiving or downloading our products.
+              </p>
+
+              <h3 className="text-xl font-semibold text-foreground mt-6 mb-3">Contact us for any issues:</h3>
+              <p>
+                If you have any questions about our Returns and Refunds Policy, please contact us at:<br />
+                📧 prenatlyogaa@gmail.com
+              </p>
+            </div>
+          </div>
+
           {/* Terms of Use Section */}
           <div className="p-8 bg-card rounded-lg shadow-gentle">
             <h2 className="text-2xl font-bold text-foreground mb-6">Terms of Use</h2>
