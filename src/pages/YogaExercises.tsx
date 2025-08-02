@@ -174,9 +174,19 @@ const breathingExercises = [
 const YogaExercises = () => {
   const [selectedTrimester, setSelectedTrimester] = useState("first-trimester");
 
+  const handleLogin = () => {
+    // Placeholder for login functionality
+    console.log("Login clicked");
+  };
+
+  const handleSignup = () => {
+    // Placeholder for signup functionality
+    console.log("Signup clicked");
+  };
+
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
+      <Navigation onLogin={handleLogin} onSignup={handleSignup} />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-hero">

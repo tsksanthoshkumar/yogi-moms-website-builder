@@ -3,7 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 
-const Navigation = () => {
+interface NavigationProps {
+  onLogin: () => void;
+  onSignup: () => void;
+}
+
+const Navigation = ({ onLogin, onSignup }: NavigationProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -66,7 +71,10 @@ const Navigation = () => {
             <button onClick={() => scrollToSection('contact')} className="text-foreground hover:text-primary transition-colors">
               Contact
             </button>
-            <Button variant="default" onClick={() => scrollToSection('pricing')}>
+            <Button variant="outline" onClick={onLogin}>
+              Login
+            </Button>
+            <Button variant="default" onClick={onSignup}>
               Start Journey
             </Button>
           </div>
@@ -104,9 +112,14 @@ const Navigation = () => {
               <button onClick={() => scrollToSection('contact')} className="text-left text-foreground hover:text-primary transition-colors">
                 Contact
               </button>
-              <Button variant="default" onClick={() => scrollToSection('pricing')} className="self-start">
-                Start Journey
-              </Button>
+              <div className="flex gap-2">
+                <Button variant="outline" onClick={onLogin} className="flex-1">
+                  Login
+                </Button>
+                <Button variant="default" onClick={onSignup} className="flex-1">
+                  Start Journey
+                </Button>
+              </div>
             </div>
           </div>
         )}

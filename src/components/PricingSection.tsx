@@ -3,11 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-const PricingSection = () => {
-  const handleBuyNow = () => {
-    // Note: This would require Supabase integration for actual payment processing
-    alert("Payment integration requires Supabase setup. This is a demo button.");
-  };
+interface PricingSectionProps {
+  onSignup: () => void;
+}
+
+const PricingSection = ({ onSignup }: PricingSectionProps) => {
 
   return (
     <section id="pricing" className="py-20 bg-gradient-section">
@@ -85,7 +85,7 @@ const PricingSection = () => {
               <Button 
                 size="lg" 
                 className="w-full mt-6 py-6 text-lg shadow-gentle hover:shadow-card transition-shadow"
-                onClick={handleBuyNow}
+                onClick={onSignup}
               >
                 Buy Now - ₹1999
               </Button>

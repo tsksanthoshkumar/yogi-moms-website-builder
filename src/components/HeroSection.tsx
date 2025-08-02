@@ -2,7 +2,11 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-yoga.jpg";
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  onSignup: () => void;
+}
+
+const HeroSection = ({ onSignup }: HeroSectionProps) => {
   const scrollToPricing = () => {
     const element = document.getElementById('pricing');
     if (element) {
@@ -77,10 +81,10 @@ const HeroSection = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button 
                   size="lg" 
-                  onClick={scrollToPricing}
+                  onClick={onSignup}
                   className="px-12 py-6 text-xl font-semibold shadow-gentle hover:shadow-card transition-all duration-300 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary"
                 >
-                  Start Your Transformation ₹1999
+                  Start Your Healthy Pregnancy Journey
                 </Button>
                 <Button 
                   variant="outline" 
