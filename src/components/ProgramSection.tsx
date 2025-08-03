@@ -96,10 +96,20 @@ const ProgramSection = () => {
         </div>
 
         {/* Bonus Content */}
-        <div className="bg-gradient-section rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-foreground text-center mb-8">
+        <div className="bg-gradient-section rounded-2xl p-8 relative">
+          <div className="absolute top-4 right-4">
+            <div className="bg-red-500 text-white px-4 py-2 rounded-full font-bold text-lg animate-pulse">
+              FREE!
+            </div>
+          </div>
+          <h3 className="text-2xl font-bold text-foreground text-center mb-4">
             Bonus Content Included
           </h3>
+          <div className="text-center mb-6">
+            <div className="bg-yellow-400 text-black px-6 py-3 rounded-lg inline-block font-bold text-xl">
+              ₹7,000 Worth Content - Absolutely FREE!
+            </div>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {bonusContent.map((bonus, index) => (
               <div key={index} className="flex items-center text-muted-foreground">

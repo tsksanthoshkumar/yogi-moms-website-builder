@@ -39,12 +39,7 @@ const AboutSection = () => {
             </div>
           </div>
           <div className="order-1 lg:order-2 text-center">
-            <div className="w-80 h-80 rounded-full mx-auto bg-gradient-primary flex items-center justify-center">
-              <div className="text-white text-center">
-                <h3 className="text-2xl font-bold mb-2">Expert Care</h3>
-                <p className="text-lg">For Every Mom</p>
-              </div>
-            </div>
+            {/* Removed Expert Care section as requested */}
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ import AboutSection from "@/components/AboutSection";
 import ProgramSection from "@/components/ProgramSection";
 import PricingSection from "@/components/PricingSection";
 import TeamSection from "@/components/TeamSection";
+import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import AuthModals from "@/components/AuthModals";
@@ -26,6 +27,7 @@ const Index = () => {
       <TestimonialsSection />
       <PricingSection onSignup={auth.openSignup} />
       <TeamSection />
+      <ContactForm />
       <Footer />
       <WhatsAppFloat />
       <AuthModals 
