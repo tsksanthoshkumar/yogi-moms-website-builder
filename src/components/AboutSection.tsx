@@ -39,17 +39,11 @@ const AboutSection = () => {
             </div>
           </div>
           <div className="order-1 lg:order-2 text-center">
-            <img 
-              src="/lovable-uploads/a7cc4eb2-e3a5-48c2-8eb4-4600d8373239.png" 
-              alt="Yoga instructor and founder" 
-              className="w-80 h-80 rounded-full mx-auto shadow-card object-cover"
-            />
-            <div className="mt-6">
-              <h3 className="text-xl font-semibold text-foreground">Dr. Meera Patel</h3>
-              <p className="text-muted-foreground">Certified Prenatal Yoga Instructor</p>
-              <p className="text-sm text-muted-foreground mt-2">
-                10+ years experience | Mother of 2 | RYT-500 Certified
-              </p>
+            <div className="w-80 h-80 rounded-full mx-auto bg-gradient-primary flex items-center justify-center">
+              <div className="text-white text-center">
+                <h3 className="text-2xl font-bold mb-2">Expert Care</h3>
+                <p className="text-lg">For Every Mom</p>
+              </div>
             </div>
           </div>
         </div>
