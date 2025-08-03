@@ -96,15 +96,20 @@ const ProgramSection = () => {
         </div>
 
         {/* Bonus Content */}
-        <div className="bg-gradient-section rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-foreground text-center mb-8">
-            Bonus Content Included
-          </h3>
+        <div className="bg-gradient-primary rounded-2xl p-8 border-2 border-primary/20 shadow-glow">
+          <div className="text-center mb-8">
+            <div className="inline-block bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-4">
+              <span className="text-white font-bold text-lg">₹7000 Worth Content FREE</span>
+            </div>
+            <h3 className="text-2xl font-bold text-white">
+              Bonus Content Included
+            </h3>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {bonusContent.map((bonus, index) => (
-              <div key={index} className="flex items-center text-muted-foreground">
-                <span className="mr-3">{bonus.split(' ')[0]}</span>
-                <span>{bonus.substring(bonus.indexOf(' ') + 1)}</span>
+              <div key={index} className="flex items-center text-white/90 bg-white/5 rounded-lg p-3 backdrop-blur-sm">
+                <span className="mr-3 text-xl">{bonus.split(' ')[0]}</span>
+                <span className="text-sm">{bonus.substring(bonus.indexOf(' ') + 1)}</span>
               </div>
             ))}
           </div>
