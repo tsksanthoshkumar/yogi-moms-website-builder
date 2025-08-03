@@ -1,12 +1,8 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import indianWoman1 from "@/assets/indian-woman-1.jpg";
+import indianWoman2 from "@/assets/indian-woman-2.jpg";
+import indianWoman3 from "@/assets/indian-woman-3.jpg";
 
 const TeamSection = () => {
   const experts = [
@@ -14,75 +10,69 @@ const TeamSection = () => {
       id: 1,
       name: "Ms. Sarah Collins",
       title: "Certified Prenatal Yoga Instructor (English)",
-      description: "Specializes in second-trimester yoga sessions",
-      image: "/lovable-uploads/3836de99-892e-44a4-9f0e-7cfa9e6d7afd.png"
+      description: "Helping moms stay active and calm throughout pregnancy. Specializes in prenatal yoga.",
+      image: indianWoman1
     },
     {
       id: 2,
       name: "Mrs. Kavita Sharma",
       title: "Prenatal Yoga Expert (Hindi)",
-      description: "8+ years guiding Indian moms through breathwork",
-      image: "/lovable-uploads/b2a300c0-38c8-4eaf-b1ed-f53db626bae8.png"
+      description: "Guiding Indian moms through breathwork and gentle poses in Hindi. 8+ years experience.",
+      image: indianWoman2
     },
     {
       id: 3,
       name: "Dr. Aarti Verma",
-      title: "Prenatal Dietician & Nutritionist",
-      description: "Trimester-specific diet plans for South/North Indian moms",
-      image: "/lovable-uploads/bd78dcf2-ee11-41d7-b974-01cc4f1ab974.png"
+      title: "Prenatal Nutritionist & Dietician",
+      description: "Custom South & North Indian diet plans for each trimester. Mother of 1. 6+ years experience.",
+      image: indianWoman3
     }
   ];
 
   return (
-    <section className="py-20 bg-soft-pink">
+    <section className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Expert Support Team
+            Meet Our Expert Team
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Professional guidance throughout your pregnancy journey
+            Our certified experts are here to guide you through every step of your pregnancy journey
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto">
-          <Carousel className="w-full">
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {experts.map((expert) => (
-                <CarouselItem key={expert.id} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                  <Card className="border-0 bg-background/80 backdrop-blur-sm shadow-gentle rounded-2xl">
-                    <CardContent className="p-8">
-                      <div className="flex flex-col items-center text-center space-y-4">
-                        {/* Circular Image */}
-                        <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden bg-gradient-primary p-0.5">
-                          <img
-                            src={expert.image}
-                            alt={expert.name}
-                            className="w-full h-full object-cover rounded-full"
-                          />
-                        </div>
+        <div className="max-w-4xl mx-auto space-y-12">
+          {experts.map((expert) => (
+            <Card key={expert.id} className="shadow-gentle border-0 bg-background/80 backdrop-blur-sm">
+              <CardContent className="p-8">
+                <div className="flex flex-col items-center text-center space-y-6">
+                  {/* Circular Image */}
+                  <div className="relative">
+                    <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden bg-gradient-primary p-1">
+                      <img
+                        src={expert.image}
+                        alt={expert.name}
+                        className="w-full h-full object-cover rounded-full"
+                      />
+                    </div>
+                  </div>
 
-                        {/* Expert Details */}
-                        <div className="space-y-2">
-                          <h3 className="text-xl font-bold text-foreground">
-                            {expert.name}
-                          </h3>
-                          <p className="text-sm font-medium text-primary">
-                            {expert.title}
-                          </p>
-                          <p className="text-sm text-muted-foreground leading-relaxed">
-                            {expert.description}
-                          </p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
-          </Carousel>
+                  {/* Expert Details */}
+                  <div className="space-y-3">
+                    <h3 className="text-2xl font-bold text-foreground">
+                      {expert.name}
+                    </h3>
+                    <p className="text-lg font-medium text-primary">
+                      {expert.title}
+                    </p>
+                    <p className="text-muted-foreground max-w-md mx-auto leading-relaxed">
+                      {expert.description}
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
