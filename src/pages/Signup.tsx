@@ -150,7 +150,7 @@ const Signup = () => {
                 <li>1. Fill the registration form above</li>
                 <li>2. Click "Register & Pay ₹1999"</li>
                 <li>3. Complete payment </li>
-                <li>4. Use the same email/password to login</li>
+                <li>4. Use the same email/password to login to access the course</li>
               </ol>
             </div>
           </CardContent>
