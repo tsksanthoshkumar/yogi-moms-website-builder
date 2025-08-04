@@ -71,11 +71,11 @@ const Navigation = ({ onLogin, onSignup }: NavigationProps) => {
             <button onClick={() => scrollToSection('contact')} className="text-foreground hover:text-primary transition-colors">
               Contact
             </button>
-            <Button variant="outline" onClick={onLogin}>
+            <Button variant="outline" onClick={() => navigate('/login')}>
               Login
             </Button>
-            <Button variant="default" onClick={onSignup}>
-              Start Journey
+            <Button variant="default" onClick={() => navigate('/signup')}>
+              Join Course (₹1999)
             </Button>
           </div>
 
@@ -113,11 +113,11 @@ const Navigation = ({ onLogin, onSignup }: NavigationProps) => {
                 Contact
               </button>
               <div className="flex gap-2">
-                <Button variant="outline" onClick={onLogin} className="flex-1">
+                <Button variant="outline" onClick={() => navigate('/login')} className="flex-1">
                   Login
                 </Button>
-                <Button variant="default" onClick={onSignup} className="flex-1">
-                  Start Journey
+                <Button variant="default" onClick={() => navigate('/signup')} className="flex-1">
+                  Join Course (₹1999)
                 </Button>
               </div>
             </div>
