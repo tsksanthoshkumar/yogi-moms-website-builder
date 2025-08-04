@@ -38,9 +38,7 @@ const Signup = () => {
       const passwordHash = await bcrypt.hash(formData.password, 10);
 
       // Save to form_fill table
-      const {
-        error
-      } = await supabase.from('form_fill').insert([{
+      const { error } = await supabase.from('form_fill').insert([{
         full_name: formData.fullName,
         email: formData.email,
         password_hash: passwordHash,
@@ -69,7 +67,7 @@ const Signup = () => {
   const openRazorpayPayment = () => {
     const script = document.createElement('script');
     script.src = 'https://checkout.razorpay.com/v1/payment-button.js';
-    script.setAttribute('data-payment_button_id', 'pl_R0yx50DSbxhnSD');
+    script.setAttribute('data-payment_button_id', 'pl_R1I3bqUwMN6hKV');
     script.async = true;
     script.onload = () => {
       // Payment script loaded
