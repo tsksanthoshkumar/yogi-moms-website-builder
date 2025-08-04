@@ -98,9 +98,7 @@ const Signup = () => {
       <div className="max-w-md w-full">
         <Card className="shadow-xl border-0">
           <CardHeader className="text-center">
-            <CardTitle className="text-2xl font-bold text-foreground">
-              Join Our Prenatal Course
-            </CardTitle>
+            <CardTitle className="text-2xl font-bold text-foreground">Join our Prenatal Yoga  for Moms-to-Be</CardTitle>
             <p className="text-muted-foreground">
               Sign up and pay ₹1999 to access premium pregnancy support content
             </p>
