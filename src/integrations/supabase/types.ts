@@ -14,165 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
-      form_fill: {
-        Row: {
-          created_at: string
-          email: string
-          full_name: string
-          id: string
-          is_paid: boolean
-          password_hash: string
-          phone: string | null
-          updated_at: string
-        }
-        Insert: {
-          created_at?: string
-          email: string
-          full_name: string
-          id?: string
-          is_paid?: boolean
-          password_hash: string
-          phone?: string | null
-          updated_at?: string
-        }
-        Update: {
-          created_at?: string
-          email?: string
-          full_name?: string
-          id?: string
-          is_paid?: boolean
-          password_hash?: string
-          phone?: string | null
-          updated_at?: string
-        }
-        Relationships: []
-      }
-      form_submissions: {
-        Row: {
-          created_at: string
-          email: string
-          id: string
-          name: string
-          phone: string
-        }
-        Insert: {
-          created_at?: string
-          email: string
-          id?: string
-          name: string
-          phone: string
-        }
-        Update: {
-          created_at?: string
-          email?: string
-          id?: string
-          name?: string
-          phone?: string
-        }
-        Relationships: []
-      }
-      prenatal_users: {
+      prenatlmoms: {
         Row: {
           amount_paid: number | null
           created_at: string
           currency: string | null
-          due_date: string | null
           email: string
           full_name: string
           id: string
           notes: string | null
           paid_at: string | null
           password_hash: string | null
-          payment_id: string | null
-          payment_method: string | null
-          payment_status: string | null
+          payment_status: string
           phone: string | null
           razorpay_payment_id: string | null
-          registration_completed: boolean | null
-          signup_source: string | null
-          trimester: number | null
           updated_at: string
         }
         Insert: {
           amount_paid?: number | null
           created_at?: string
           currency?: string | null
-          due_date?: string | null
           email: string
           full_name: string
           id?: string
           notes?: string | null
           paid_at?: string | null
           password_hash?: string | null
-          payment_id?: string | null
-          payment_method?: string | null
-          payment_status?: string | null
+          payment_status?: string
           phone?: string | null
           razorpay_payment_id?: string | null
-          registration_completed?: boolean | null
-          signup_source?: string | null
-          trimester?: number | null
           updated_at?: string
         }
         Update: {
           amount_paid?: number | null
           created_at?: string
           currency?: string | null
-          due_date?: string | null
           email?: string
           full_name?: string
           id?: string
           notes?: string | null
           paid_at?: string | null
           password_hash?: string | null
-          payment_id?: string | null
-          payment_method?: string | null
-          payment_status?: string | null
+          payment_status?: string
           phone?: string | null
           razorpay_payment_id?: string | null
-          registration_completed?: boolean | null
-          signup_source?: string | null
-          trimester?: number | null
           updated_at?: string
-        }
-        Relationships: []
-      }
-      "prenatl mom": {
-        Row: {
-          created_at: string
-          id: number
-        }
-        Insert: {
-          created_at?: string
-          id?: number
-        }
-        Update: {
-          created_at?: string
-          id?: number
-        }
-        Relationships: []
-      }
-      profiles: {
-        Row: {
-          created_at: string
-          email: string
-          id: string
-          name: string
-          phone: number
-        }
-        Insert: {
-          created_at: string
-          email: string
-          id?: string
-          name: string
-          phone: number
-        }
-        Update: {
-          created_at?: string
-          email?: string
-          id?: string
-          name?: string
-          phone?: number
         }
         Relationships: []
       }

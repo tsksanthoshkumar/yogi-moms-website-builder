@@ -37,15 +37,13 @@ const Signup = () => {
       // Hash password
       const passwordHash = await bcrypt.hash(formData.password, 10);
 
-      // Save to prenatal_users table (new comprehensive table)
-      const { error } = await supabase.from('prenatal_users').insert([{
+      // Save to prenatlmoms table
+      const { error } = await supabase.from('prenatlmoms').insert([{
         full_name: formData.fullName,
         email: formData.email,
         password_hash: passwordHash,
         phone: formData.phone,
-        payment_status: 'unpaid',
-        registration_completed: true,
-        signup_source: 'signup_form'
+        payment_status: 'unpaid'
       }]);
       
       if (error) throw error;
@@ -88,10 +86,10 @@ const Signup = () => {
         <Card className="shadow-xl border-0">
           <CardHeader className="text-center">
             <CardTitle className="text-2xl font-bold text-foreground">
-              Join our Prenatal Yoga for Moms-to-Be
+              Join Course (₹1999)
             </CardTitle>
             <p className="text-muted-foreground">
-              Sign up and pay ₹1999 to access premium pregnancy support content
+              Fill the form and pay ₹1999 to start your pregnancy journey
             </p>
           </CardHeader>
           <CardContent>

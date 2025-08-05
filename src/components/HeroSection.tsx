@@ -81,10 +81,10 @@ const HeroSection = ({ onSignup }: HeroSectionProps) => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button 
                   size="lg" 
-                  onClick={onSignup}
+                  onClick={() => window.location.href = '/signup'}
                   className="px-12 py-6 text-xl font-semibold shadow-gentle hover:shadow-card transition-all duration-300 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary"
                 >
-                  Start Your Healthy Pregnancy Journey
+                  Join Course (₹1999)
                 </Button>
                 <Button 
                   variant="outline" 

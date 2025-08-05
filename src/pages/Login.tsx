@@ -22,9 +22,9 @@ const Login = () => {
     setIsSubmitting(true);
 
     try {
-      // Check user credentials in prenatal_users table
+      // Check user credentials in prenatlmoms table
       const { data: userRecord, error } = await supabase
-        .from('prenatal_users')
+        .from('prenatlmoms')
         .select('*')
         .eq('email', formData.email)
         .single();

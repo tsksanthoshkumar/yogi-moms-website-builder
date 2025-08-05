@@ -21,8 +21,13 @@ const ContactForm = () => {
 
     try {
       const { error } = await supabase
-        .from('form_submissions')
-        .insert([formData]);
+        .from('prenatlmoms')
+        .insert([{
+          full_name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          payment_status: 'unpaid'
+        }]);
 
       if (error) throw error;
 
