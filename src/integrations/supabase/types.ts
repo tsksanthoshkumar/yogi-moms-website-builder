@@ -71,6 +71,72 @@ export type Database = {
         }
         Relationships: []
       }
+      prenatal_users: {
+        Row: {
+          amount_paid: number | null
+          created_at: string
+          currency: string | null
+          due_date: string | null
+          email: string
+          full_name: string
+          id: string
+          notes: string | null
+          paid_at: string | null
+          password_hash: string | null
+          payment_id: string | null
+          payment_method: string | null
+          payment_status: string | null
+          phone: string | null
+          razorpay_payment_id: string | null
+          registration_completed: boolean | null
+          signup_source: string | null
+          trimester: number | null
+          updated_at: string
+        }
+        Insert: {
+          amount_paid?: number | null
+          created_at?: string
+          currency?: string | null
+          due_date?: string | null
+          email: string
+          full_name: string
+          id?: string
+          notes?: string | null
+          paid_at?: string | null
+          password_hash?: string | null
+          payment_id?: string | null
+          payment_method?: string | null
+          payment_status?: string | null
+          phone?: string | null
+          razorpay_payment_id?: string | null
+          registration_completed?: boolean | null
+          signup_source?: string | null
+          trimester?: number | null
+          updated_at?: string
+        }
+        Update: {
+          amount_paid?: number | null
+          created_at?: string
+          currency?: string | null
+          due_date?: string | null
+          email?: string
+          full_name?: string
+          id?: string
+          notes?: string | null
+          paid_at?: string | null
+          password_hash?: string | null
+          payment_id?: string | null
+          payment_method?: string | null
+          payment_status?: string | null
+          phone?: string | null
+          razorpay_payment_id?: string | null
+          registration_completed?: boolean | null
+          signup_source?: string | null
+          trimester?: number | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
       "prenatl mom": {
         Row: {
           created_at: string

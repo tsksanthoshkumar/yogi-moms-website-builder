@@ -22,9 +22,9 @@ const Login = () => {
     setIsSubmitting(true);
 
     try {
-      // Check user credentials in form_fill table
+      // Check user credentials in prenatal_users table
       const { data: userRecord, error } = await supabase
-        .from('form_fill')
+        .from('prenatal_users')
         .select('*')
         .eq('email', formData.email)
         .single();
@@ -51,15 +51,15 @@ const Login = () => {
       }
 
       // Check if payment is completed
-      if (!userRecord.is_paid) {
+      if (userRecord.payment_status !== 'paid') {
         toast({
           title: "Payment Required",
           description: "Please complete the ₹1999 payment to access the course.",
           variant: "destructive",
         });
         
-        // Show payment button
-        showPaymentOption(userRecord.email);
+        // Redirect to payment
+        window.open('https://razorpay.me/@pre-natalyoga?amount=zgioswZa9n4qt5x9yD7i%2BQ%3D%3D', '_blank');
         return;
       }
 
