@@ -4,10 +4,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 interface PricingSectionProps {
-  onSignup: () => void;
+  // No props needed anymore since we're directly linking
 }
 
-const PricingSection = ({ onSignup }: PricingSectionProps) => {
+const PricingSection = () => {
 
   return (
     <section id="pricing" className="py-20 bg-gradient-section">
@@ -85,7 +85,7 @@ const PricingSection = ({ onSignup }: PricingSectionProps) => {
               <Button 
                 size="lg" 
                 className="w-full mt-6 py-6 text-lg shadow-gentle hover:shadow-card transition-shadow"
-                onClick={onSignup}
+                onClick={() => window.open('https://superprofile.bio/course/aryancosmo9', '_blank')}
               >
                 Buy Now - ₹1999
               </Button>
