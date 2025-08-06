@@ -25,7 +25,7 @@ const Index = () => {
       <AboutSection />
       <ProgramSection />
       <TestimonialsSection />
-      <PricingSection />
+      <PricingSection onSignup={auth.openSignup} />
       <TeamSection />
       <ContactForm />
       <Footer />
