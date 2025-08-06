@@ -37,44 +37,16 @@ const AuthModals = ({
 
   const handleSignupSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (signupForm.password !== signupForm.confirmPassword) {
-      toast({
-        title: "Error",
-        description: "Passwords do not match",
-        variant: "destructive"
-      });
-      return;
-    }
-
-    if (signupForm.password.length < 6) {
-      toast({
-        title: "Error", 
-        description: "Password must be at least 6 characters",
-        variant: "destructive"
-      });
-      return;
-    }
-
-    // Simulate successful signup
-    toast({
-      title: "Account created!",
-      description: "Welcome to PrenatalYoga! You can now access your course.",
-    });
+    // Redirect to SuperProfile course
+    window.open('https://superprofile.bio/course/aryancosmo9', '_blank');
     onSignupClose();
-    setSignupForm({ name: '', email: '', password: '', confirmPassword: '', phone: '' });
   };
 
   const handleLoginSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Simulate successful login
-    toast({
-      title: "Login successful!",
-      description: "Welcome back to PrenatalYoga!",
-    });
+    // Redirect to SuperProfile course
+    window.open('https://superprofile.bio/course/aryancosmo9', '_blank');
     onLoginClose();
-    setLoginForm({ email: '', password: '' });
   };
 
   return (
