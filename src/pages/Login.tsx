@@ -1,15 +1,19 @@
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
-    // Redirect to SuperProfile course
-    window.location.href = 'https://superprofile.bio/course/aryancosmo9';
-  }, []);
+    // Redirect to SuperProfile course in new tab and go back to home
+    window.open('https://superprofile.bio/course/aryancosmo9', '_blank');
+    navigate('/');
+  }, [navigate]);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-background">
       <div className="text-center">
-        <p className="text-lg">Redirecting to course...</p>
+        <p className="text-lg">Opening course...</p>
       </div>
     </div>
   );
