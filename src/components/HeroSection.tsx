@@ -81,7 +81,7 @@ const HeroSection = ({ onSignup }: HeroSectionProps) => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button 
                   size="lg" 
-                  onClick={() => window.location.href = '/signup'}
+                  onClick={() => window.open('https://superprofile.bio/course/aryancosmo9', '_blank')}
                   className="px-12 py-6 text-xl font-semibold shadow-gentle hover:shadow-card transition-all duration-300 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary"
                 >
                   Join Course (₹1999)
