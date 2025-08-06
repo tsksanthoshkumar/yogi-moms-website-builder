@@ -1,7 +1,9 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { useToast } from "@/hooks/use-toast";
 
 interface AuthModalsProps {
   isSignupOpen: boolean;
@@ -20,11 +22,59 @@ const AuthModals = ({
   onSwitchToLogin,
   onSwitchToSignup
 }: AuthModalsProps) => {
+  const { toast } = useToast();
+  const [signupForm, setSignupForm] = useState({
+    name: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    phone: ''
+  });
+  const [loginForm, setLoginForm] = useState({
+    email: '',
+    password: ''
+  });
 
-  const handleCourseAccess = () => {
-    window.open('https://superprofile.bio/course/aryancosmo9', '_blank');
+  const handleSignupSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (signupForm.password !== signupForm.confirmPassword) {
+      toast({
+        title: "Error",
+        description: "Passwords do not match",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    if (signupForm.password.length < 6) {
+      toast({
+        title: "Error", 
+        description: "Password must be at least 6 characters",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // Simulate successful signup
+    toast({
+      title: "Account created!",
+      description: "Welcome to PrenatalYoga! You can now access your course.",
+    });
     onSignupClose();
+    setSignupForm({ name: '', email: '', password: '', confirmPassword: '', phone: '' });
+  };
+
+  const handleLoginSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Simulate successful login
+    toast({
+      title: "Login successful!",
+      description: "Welcome back to PrenatalYoga!",
+    });
     onLoginClose();
+    setLoginForm({ email: '', password: '' });
   };
 
   return (
@@ -37,12 +87,59 @@ const AuthModals = ({
               Start Your Healthy Pregnancy Journey
             </DialogTitle>
           </DialogHeader>
-          <div className="space-y-4 text-center">
-            <p className="text-muted-foreground">
-              Click below to access your prenatal course and start your wellness journey.
-            </p>
-            <Button onClick={handleCourseAccess} className="w-full">
-              Access Course
+          <form onSubmit={handleSignupSubmit} className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="name">Full Name</Label>
+              <Input
+                id="name"
+                type="text"
+                value={signupForm.name}
+                onChange={(e) => setSignupForm({ ...signupForm, name: e.target.value })}
+                required
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="email">Email Address</Label>
+              <Input
+                id="email"
+                type="email"
+                value={signupForm.email}
+                onChange={(e) => setSignupForm({ ...signupForm, email: e.target.value })}
+                required
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="password">Password</Label>
+              <Input
+                id="password"
+                type="password"
+                value={signupForm.password}
+                onChange={(e) => setSignupForm({ ...signupForm, password: e.target.value })}
+                required
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="confirmPassword">Confirm Password</Label>
+              <Input
+                id="confirmPassword"
+                type="password"
+                value={signupForm.confirmPassword}
+                onChange={(e) => setSignupForm({ ...signupForm, confirmPassword: e.target.value })}
+                required
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="phone">Phone Number (Optional)</Label>
+              <Input
+                id="phone"
+                type="tel"
+                value={signupForm.phone}
+                onChange={(e) => setSignupForm({ ...signupForm, phone: e.target.value })}
+                placeholder="+1 (555) 123-4567"
+              />
+            </div>
+            <Button type="submit" className="w-full">
+              Create Account
             </Button>
             <div className="text-center text-sm">
               Already have an account?{' '}
@@ -54,7 +151,7 @@ const AuthModals = ({
                 Login here
               </button>
             </div>
-          </div>
+          </form>
         </DialogContent>
       </Dialog>
 
@@ -66,12 +163,29 @@ const AuthModals = ({
               Welcome Back
             </DialogTitle>
           </DialogHeader>
-          <div className="space-y-4 text-center">
-            <p className="text-muted-foreground">
-              Click below to continue with your prenatal course.
-            </p>
-            <Button onClick={handleCourseAccess} className="w-full">
-              Continue to Course
+          <form onSubmit={handleLoginSubmit} className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="loginEmail">Email Address</Label>
+              <Input
+                id="loginEmail"
+                type="email"
+                value={loginForm.email}
+                onChange={(e) => setLoginForm({ ...loginForm, email: e.target.value })}
+                required
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="loginPassword">Password</Label>
+              <Input
+                id="loginPassword"
+                type="password"
+                value={loginForm.password}
+                onChange={(e) => setLoginForm({ ...loginForm, password: e.target.value })}
+                required
+              />
+            </div>
+            <Button type="submit" className="w-full">
+              Login
             </Button>
             <div className="text-center text-sm">
               Don't have an account?{' '}
@@ -83,7 +197,7 @@ const AuthModals = ({
                 Sign up here
               </button>
             </div>
-          </div>
+          </form>
         </DialogContent>
       </Dialog>
     </>
