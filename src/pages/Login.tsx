@@ -7,45 +7,41 @@ import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { useNavigate, Link } from "react-router-dom";
 import bcrypt from 'bcryptjs';
-
 const Login = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const navigate = useNavigate();
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
     try {
       // Check user credentials in prenatlmoms table
-      const { data: userRecord, error } = await supabase
-        .from('prenatlmoms')
-        .select('*')
-        .eq('email', formData.email)
-        .single();
-
+      const {
+        data: userRecord,
+        error
+      } = await supabase.from('prenatlmoms').select('*').eq('email', formData.email).single();
       if (error || !userRecord) {
         toast({
           title: "Error",
           description: "Invalid email or user not found. Please sign up first.",
-          variant: "destructive",
+          variant: "destructive"
         });
         return;
       }
 
       // Verify password
       const passwordMatch = await bcrypt.compare(formData.password, userRecord.password_hash);
-      
       if (!passwordMatch) {
         toast({
           title: "Error",
           description: "Invalid password. Please try again.",
-          variant: "destructive",
+          variant: "destructive"
         });
         return;
       }
@@ -55,9 +51,9 @@ const Login = () => {
         toast({
           title: "Payment Required",
           description: "Please complete the ₹1999 payment to access the course.",
-          variant: "destructive",
+          variant: "destructive"
         });
-        
+
         // Redirect to payment
         window.open('https://razorpay.me/@pre-natalyoga?amount=zgioswZa9n4qt5x9yD7i%2BQ%3D%3D', '_blank');
         return;
@@ -67,26 +63,22 @@ const Login = () => {
       localStorage.setItem('userEmail', userRecord.email);
       localStorage.setItem('userName', userRecord.full_name);
       localStorage.setItem('isLoggedIn', 'true');
-
       toast({
         title: "Login Successful!",
-        description: "Welcome back! Redirecting to your course dashboard.",
+        description: "Welcome back! Redirecting to your course dashboard."
       });
-
       navigate('/dashboard');
-      
     } catch (error: any) {
       console.error('Error logging in:', error);
       toast({
         title: "Error",
         description: "There was an error logging in. Please try again.",
-        variant: "destructive",
+        variant: "destructive"
       });
     } finally {
       setIsSubmitting(false);
     }
   };
-
   const showPaymentOption = (email: string) => {
     // Show payment instructions
     const paymentDiv = document.createElement('div');
@@ -109,83 +101,12 @@ const Login = () => {
     `;
     document.body.appendChild(paymentDiv);
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-purple-50 flex items-center justify-center py-12 px-4">
-      <div className="max-w-md w-full">
-        <Card className="shadow-xl border-0">
-          <CardHeader className="text-center">
-            <CardTitle className="text-2xl font-bold text-foreground">
-              Login to Your Course
-            </CardTitle>
-            <p className="text-muted-foreground">
-              Access your premium pregnancy support content
-            </p>
-          </CardHeader>
-          <CardContent>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <Label htmlFor="email">Email Address</Label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  placeholder="Enter your email"
-                />
-              </div>
-              
-              <div>
-                <Label htmlFor="password">Password</Label>
-                <Input
-                  id="password"
-                  name="password"
-                  type="password"
-                  value={formData.password}
-                  onChange={handleChange}
-                  required
-                  placeholder="Enter your password"
-                />
-              </div>
-              
-              <Button 
-                type="submit" 
-                className="w-full"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? 'Logging in...' : 'Login to Course'}
-              </Button>
-            </form>
-            
-            <div className="mt-6 text-center">
-              <p className="text-sm text-muted-foreground">
-                Don't have an account?{' '}
-                <Link to="/signup" className="text-primary hover:underline">
-                  Sign up here
-                </Link>
-              </p>
-            </div>
-
-            <div className="mt-4 p-4 bg-green-50 rounded-lg">
-              <h3 className="font-medium text-green-900 mb-2">✅ After Payment Success:</h3>
-              <p className="text-sm text-green-800">
-                "Payment successful! You can now log in using the same email and password."
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
-  );
+  return;
 };
-
 export default Login;
