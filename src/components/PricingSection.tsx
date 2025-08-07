@@ -10,7 +10,7 @@ interface PricingSectionProps {
 const PricingSection = ({ onSignup }: PricingSectionProps) => {
   const handleWhatsAppClick = () => {
     const message = "Hi! I have a question about the prenatal yoga program.";
-    const whatsappUrl = `https://wa.me/917013805270?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/917013805271?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
