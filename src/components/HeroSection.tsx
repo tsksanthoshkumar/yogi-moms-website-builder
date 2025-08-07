@@ -1,21 +1,21 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-yoga.jpg";
-
 interface HeroSectionProps {
   onSignup: () => void;
 }
-
-const HeroSection = ({ onSignup }: HeroSectionProps) => {
+const HeroSection = ({
+  onSignup
+}: HeroSectionProps) => {
   const scrollToPricing = () => {
     const element = document.getElementById('pricing');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-hero pt-20">
+  return <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-hero pt-20">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left space-y-8">
@@ -79,19 +79,12 @@ const HeroSection = ({ onSignup }: HeroSectionProps) => {
             {/* Enhanced CTA Section */}
             <div className="space-y-6">
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button 
-                  size="lg" 
-                  onClick={() => window.open('https://superprofile.bio/course/aryancosmo9', '_blank')}
-                  className="px-12 py-6 text-xl font-semibold shadow-gentle hover:shadow-card transition-all duration-300 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary"
-                >
+                <Button size="lg" onClick={() => window.open('https://superprofile.bio/course/aryancosmo9', '_blank')} className="px-12 py-6 text-xl font-semibold shadow-gentle hover:shadow-card transition-all duration-300 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary">
                   Join Course (₹1999)
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  onClick={() => document.getElementById('program')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="px-8 py-6 text-lg border-2 hover:bg-primary/5"
-                >
+                <Button variant="outline" size="lg" onClick={() => document.getElementById('program')?.scrollIntoView({
+                behavior: 'smooth'
+              })} className="px-8 py-6 text-lg border-2 hover:bg-primary/5">
                   What's Inside the Course
                 </Button>
               </div>
@@ -112,9 +105,9 @@ const HeroSection = ({ onSignup }: HeroSectionProps) => {
                 <div className="text-sm text-muted-foreground">Happy Mothers</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">9 months plan</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">9 </div>
                 <div className="text-sm text-muted-foreground">
-                  for all trimesters
+                  <span className="line-through text-muted-foreground/60">₹3999</span> One-Time Payment
                 </div>
               </div>
               <div className="text-center lg:text-left">
@@ -125,16 +118,10 @@ const HeroSection = ({ onSignup }: HeroSectionProps) => {
           </div>
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-soft-pink to-gentle-blue rounded-3xl opacity-20"></div>
-            <img 
-              src={heroImage} 
-              alt="Pregnant woman doing yoga" 
-              className="w-full h-auto rounded-3xl shadow-card relative z-10"
-            />
+            <img src={heroImage} alt="Pregnant woman doing yoga" className="w-full h-auto rounded-3xl shadow-card relative z-10" />
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
