@@ -42,6 +42,14 @@ const testimonials = [
     rating: "⭐⭐⭐⭐⭐",
     image: "/lovable-uploads/a9c54145-d61a-4dc6-8d2c-5b924f75aaa5.png",
     bgColor: "bg-gradient-to-br from-green-100 to-green-200"
+  },
+  {
+    name: "Rashika Patel",
+    location: "Ahmedabad",
+    text: "I joined in my 7th month thinking it might be too late, but this course helped me so much! The breathing techniques and poses really helped during my labor pain and I had a normal delivery.",
+    rating: "⭐⭐⭐⭐⭐",
+    image: "/lovable-uploads/c99c9876-9b62-494f-b389-0cf6b75c9705.png",
+    bgColor: "bg-gradient-to-br from-yellow-100 to-yellow-200"
   }
 ];
 
