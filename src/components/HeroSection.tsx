@@ -112,9 +112,9 @@ const HeroSection = ({ onSignup }: HeroSectionProps) => {
                 <div className="text-sm text-muted-foreground">Happy Mothers</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">3 Trimesters</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">9 months plan</div>
                 <div className="text-sm text-muted-foreground">
-                  Specialised for Pregnant Women
+                  for all trimesters
                 </div>
               </div>
               <div className="text-center lg:text-left">
