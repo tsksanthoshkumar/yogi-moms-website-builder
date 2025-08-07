@@ -24,7 +24,9 @@ const Index = () => {
       <YogaAnimationSection />
       <AboutSection />
       <ProgramSection />
-      <TestimonialsSection />
+      <div id="reviews">
+        <TestimonialsSection />
+      </div>
       <PricingSection onSignup={auth.openSignup} />
       <TeamSection />
       <ContactForm />

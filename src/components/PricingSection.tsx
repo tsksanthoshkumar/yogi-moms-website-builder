@@ -44,7 +44,7 @@ const PricingSection = ({ onSignup }: PricingSectionProps) => {
 
             <CardContent className="space-y-4">
               <p className="text-center text-muted-foreground mb-6">
-                Complete access to trimester-wise yoga content, bonus diet plans, and community support
+                Customized plan with trimester-wise yoga exercises recorded for pregnant mothers
               </p>
               
               <div className="space-y-3">

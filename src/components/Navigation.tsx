@@ -56,8 +56,8 @@ const Navigation = ({ onLogin, onSignup }: NavigationProps) => {
             <button onClick={() => scrollToSection('home')} className="text-foreground hover:text-primary transition-colors">
               Home
             </button>
-            <button onClick={() => handleNavigation('/yoga-exercises')} className="text-foreground hover:text-primary transition-colors">
-              Yoga & Exercises
+            <button onClick={() => scrollToSection('reviews')} className="text-foreground hover:text-primary transition-colors">
+              Reviews
             </button>
             <button onClick={() => scrollToSection('about')} className="text-foreground hover:text-primary transition-colors">
               About
@@ -97,8 +97,8 @@ const Navigation = ({ onLogin, onSignup }: NavigationProps) => {
               <button onClick={() => scrollToSection('home')} className="text-left text-foreground hover:text-primary transition-colors">
                 Home
               </button>
-              <button onClick={() => handleNavigation('/yoga-exercises')} className="text-left text-foreground hover:text-primary transition-colors">
-                Yoga & Exercises
+              <button onClick={() => scrollToSection('reviews')} className="text-left text-foreground hover:text-primary transition-colors">
+                Reviews
               </button>
               <button onClick={() => scrollToSection('about')} className="text-left text-foreground hover:text-primary transition-colors">
                 About

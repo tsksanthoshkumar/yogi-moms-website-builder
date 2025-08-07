@@ -33,13 +33,13 @@ const TeamSection = () => {
     if (!scrollContainer) return;
 
     const scroll = () => {
-      scrollContainer.scrollLeft += 1;
+      scrollContainer.scrollLeft += 0.5;
       if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
         scrollContainer.scrollLeft = 0;
       }
     };
 
-    const interval = setInterval(scroll, 30);
+    const interval = setInterval(scroll, 50);
     return () => clearInterval(interval);
   }, []);
 
