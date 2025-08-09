@@ -48,7 +48,7 @@ const testimonials = [
     location: "Ahmedabad",
     text: "I joined in my 7th month thinking it might be too late, but this course helped me so much! The breathing techniques and poses really helped during my labor pain and I had a normal delivery.",
     rating: "⭐⭐⭐⭐⭐",
-    image: https://ibb.co/8Wdz8ML
+    image: "/lovable-uploads/c99c9876-9b62-494f-b389-0cf6b75c9705.png",
     bgColor: "bg-gradient-to-br from-yellow-100 to-yellow-200"
   }
 ];
