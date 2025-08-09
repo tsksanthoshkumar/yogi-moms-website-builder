@@ -106,9 +106,7 @@ const HeroSection = ({
               </div>
               <div className="text-center lg:text-left">
                 <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">9 months</div>
-                <div className="text-sm text-muted-foreground">
-                  <span className="line-through text-muted-foreground/60">₹3999</span> One-Time Payment
-                </div>
+                <div className="text-sm text-muted-foreground">One-Time Payment</div>
               </div>
               <div className="text-center lg:text-left">
                 <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">4.9★</div>
