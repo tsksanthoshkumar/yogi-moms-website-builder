@@ -90,7 +90,7 @@ const PricingSection = ({ onSignup }: PricingSectionProps) => {
               <Button 
                 size="lg" 
                 className="w-full mt-6 py-6 text-lg shadow-gentle hover:shadow-card transition-shadow"
-                onClick={onSignup}
+                onClick={() => window.open('https://superprofile.bio/course/prenatalmoms', '_blank')}
               >
                 Buy Now - ₹1999
               </Button>

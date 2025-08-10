@@ -38,14 +38,14 @@ const AuthModals = ({
   const handleSignupSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Redirect to SuperProfile course
-    window.open('https://superprofile.bio/course/aryancosmo9', '_blank');
+    window.open('https://superprofile.bio/course/prenatalmoms', '_blank');
     onSignupClose();
   };
 
   const handleLoginSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Redirect to SuperProfile course
-    window.open('https://superprofile.bio/course/aryancosmo9', '_blank');
+    window.open('https://superprofile.bio/course/prenatalmoms', '_blank');
     onLoginClose();
   };
 

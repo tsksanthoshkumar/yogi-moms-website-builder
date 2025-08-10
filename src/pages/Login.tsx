@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 const Login = () => {
   useEffect(() => {
     // Redirect to SuperProfile course
-    window.location.href = 'https://superprofile.bio/course/aryancosmo9';
+    window.location.href = 'https://superprofile.bio/course/prenatalmoms';
   }, []);
 
   return (
