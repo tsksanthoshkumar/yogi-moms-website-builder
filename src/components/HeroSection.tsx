@@ -116,7 +116,7 @@ const HeroSection = ({
           </div>
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-soft-pink to-gentle-blue rounded-3xl opacity-20"></div>
-            <img src="/lovable-uploads/download (9).jpg" alt="Pregnant woman doing yoga" className="w-full h-auto rounded-3xl shadow-card relative z-10" />
+            <img src={heroImage} alt="Pregnant woman doing yoga" className="w-full h-auto rounded-3xl shadow-card relative z-10" />
           </div>
         </div>
       </div>
