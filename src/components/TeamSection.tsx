@@ -32,15 +32,23 @@ const TeamSection = () => {
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
 
-    const scroll = () => {
-      scrollContainer.scrollLeft += 0.5;
-      if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
-        scrollContainer.scrollLeft = 0;
+    let animationId: number;
+    let lastTime = 0;
+    const scrollSpeed = 0.3; // Reduced speed for smoother animation
+
+    const scroll = (currentTime: number) => {
+      if (currentTime - lastTime >= 16) { // ~60fps
+        scrollContainer.scrollLeft += scrollSpeed;
+        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.clientWidth) {
+          scrollContainer.scrollLeft = 0;
+        }
+        lastTime = currentTime;
       }
+      animationId = requestAnimationFrame(scroll);
     };
 
-    const interval = setInterval(scroll, 50);
-    return () => clearInterval(interval);
+    animationId = requestAnimationFrame(scroll);
+    return () => cancelAnimationFrame(animationId);
   }, []);
 
   return (
@@ -57,21 +65,24 @@ const TeamSection = () => {
 
         <div 
           ref={scrollRef}
-          className="overflow-x-auto scrollbar-hide"
-          style={{ scrollBehavior: 'smooth' }}
+          className="overflow-x-auto scrollbar-hide smooth-scroll"
+          style={{ 
+            scrollBehavior: 'smooth',
+            WebkitOverflowScrolling: 'touch'
+          }}
         >
-          <div className="flex gap-8 pb-4" style={{ width: 'max-content' }}>
+          <div className="flex gap-8 pb-4 transition-transform duration-300 ease-linear" style={{ width: 'max-content' }}>
             {[...experts, ...experts].map((expert, index) => (
-              <Card key={`${expert.id}-${index}`} className="flex-shrink-0 w-80 shadow-gentle border-0 bg-background/90 backdrop-blur-sm rounded-2xl">
+              <Card key={`${expert.id}-${index}`} className="flex-shrink-0 w-80 shadow-gentle border-0 bg-background/90 backdrop-blur-sm rounded-2xl transform transition-all duration-300 hover:scale-105">
                 <CardContent className="p-8">
                   <div className="flex flex-col items-center text-center space-y-4">
                     {/* Circular Image */}
                     <div className="relative">
-                      <div className="w-32 h-32 rounded-full overflow-hidden bg-gradient-to-br from-purple-400 to-pink-400 p-1">
+                      <div className="w-32 h-32 rounded-full overflow-hidden bg-gradient-to-br from-purple-400 to-pink-400 p-1 transition-transform duration-300">
                         <img
                           src={expert.image}
                           alt={expert.name}
-                          className="w-full h-full object-cover rounded-full"
+                          className="w-full h-full object-cover rounded-full transition-transform duration-300"
                         />
                       </div>
                     </div>
@@ -95,6 +106,32 @@ const TeamSection = () => {
           </div>
         </div>
       </div>
+      
+      <style jsx>{`
+        .smooth-scroll {
+          scroll-snap-type: x mandatory;
+        }
+        
+        .smooth-scroll > div > div {
+          scroll-snap-align: center;
+        }
+        
+        @media (max-width: 768px) {
+          .smooth-scroll {
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+          }
+        }
+        
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </section>
   );
 };
