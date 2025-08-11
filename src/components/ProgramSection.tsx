@@ -72,6 +72,57 @@ const ProgramSection = () => {
         </div>
 
         {/* Program Content */}
+        {/* Course Content Overview Card */}
+        <div className="mb-16">
+          <div className="bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 rounded-3xl p-8 md:p-12 shadow-card border border-purple-100">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                🎯 Everything You Need for a Healthy Pregnancy
+              </h3>
+              <p className="text-lg text-muted-foreground">
+                Complete support system designed for Indian mothers
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-gentle hover:shadow-card transition-all duration-300 hover:scale-105">
+                <div className="text-3xl mb-3">🧘‍♀️</div>
+                <h4 className="font-bold text-foreground mb-2">Prenatal Yoga Videos</h4>
+                <p className="text-sm text-muted-foreground">Trimester-wise routines for normal delivery & body exercises, available in Hindi & English</p>
+              </div>
+              
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-gentle hover:shadow-card transition-all duration-300 hover:scale-105">
+                <div className="text-3xl mb-3">🍱</div>
+                <h4 className="font-bold text-foreground mb-2">Diet Plans</h4>
+                <p className="text-sm text-muted-foreground">Veg/Non-Veg options with South & North Indian menus</p>
+              </div>
+              
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-gentle hover:shadow-card transition-all duration-300 hover:scale-105">
+                <div className="text-3xl mb-3">❤️</div>
+                <h4 className="font-bold text-foreground mb-2">Husband's Guide</h4>
+                <p className="text-sm text-muted-foreground">Practical tips for partners to support you better</p>
+              </div>
+              
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-gentle hover:shadow-card transition-all duration-300 hover:scale-105">
+                <div className="text-3xl mb-3">🎯</div>
+                <h4 className="font-bold text-foreground mb-2">Fun Activity Guide</h4>
+                <p className="text-sm text-muted-foreground">5 engaging activities for a joyful pregnancy</p>
+              </div>
+              
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-gentle hover:shadow-card transition-all duration-300 hover:scale-105">
+                <div className="text-3xl mb-3">✍️</div>
+                <h4 className="font-bold text-foreground mb-2">Pregnancy Journal</h4>
+                <p className="text-sm text-muted-foreground">Record your journey week by week</p>
+              </div>
+              
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-gentle hover:shadow-card transition-all duration-300 hover:scale-105">
+                <div className="text-3xl mb-3">📚</div>
+                <h4 className="font-bold text-foreground mb-2">eBook & FAQs</h4>
+                <p className="text-sm text-muted-foreground">All your pregnancy questions answered… and more!</p>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {programContent.map((phase, index) => (
             <Card key={index} className="border border-border shadow-gentle hover:shadow-card transition-shadow duration-300">

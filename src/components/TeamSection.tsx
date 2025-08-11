@@ -1,8 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const TeamSection = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = React.useState(false);
+  const [canScrollRight, setCanScrollRight] = React.useState(true);
 
   const experts = [
     {
@@ -51,6 +55,34 @@ const TeamSection = () => {
     return () => cancelAnimationFrame(animationId);
   }, []);
 
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -320, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 320, behavior: 'smooth' });
+    }
+  };
+
+  const checkScrollButtons = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+    }
+  };
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (scrollContainer) {
+      scrollContainer.addEventListener('scroll', checkScrollButtons);
+      checkScrollButtons();
+      return () => scrollContainer.removeEventListener('scroll', checkScrollButtons);
+    }
+  }, []);
   return (
     <section className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
       <div className="container mx-auto px-4">
@@ -61,6 +93,28 @@ const TeamSection = () => {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Our certified experts are here to guide you through every step of your pregnancy journey
           </p>
+        </div>
+
+        {/* Mobile Navigation Buttons */}
+        <div className="flex justify-center items-center mt-8 space-x-4 md:hidden">
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={scrollLeft}
+            disabled={!canScrollLeft}
+            className="h-12 w-12 rounded-full shadow-gentle"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </Button>
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={scrollRight}
+            disabled={!canScrollRight}
+            className="h-12 w-12 rounded-full shadow-gentle"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </Button>
         </div>
 
         <div 
