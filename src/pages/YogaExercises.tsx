@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import FloatingJoinButton from "@/components/FloatingJoinButton";
 
 const yogaPoses = {
   "first-trimester": [
@@ -338,13 +339,14 @@ const YogaExercises = () => {
               className="px-12 py-6 text-xl font-semibold"
               onClick={() => window.location.href = '/#pricing'}
             >
-              Join Our Prenatal Yoga Program
+              Join Now
             </Button>
           </div>
         </div>
       </section>
 
       <Footer />
+      <FloatingJoinButton />
     </div>
   );
 };

@@ -74,8 +74,8 @@ const Navigation = ({ onLogin, onSignup }: NavigationProps) => {
             <Button variant="outline" onClick={() => window.open('https://superprofile.bio/course/prenatalmoms', '_blank')}>
               Login
             </Button>
-            <Button variant="default" onClick={() => window.open('https://superprofile.bio/course/prenatalmoms', '_blank')}>
-              Join Course (₹1999)
+            <Button variant="default" onClick={() => window.open('https://superprofile.bio/course/prenatalmoms', '_blank')} className="font-bold">
+              Join Now
             </Button>
           </div>
 
@@ -116,8 +116,8 @@ const Navigation = ({ onLogin, onSignup }: NavigationProps) => {
                 <Button variant="outline" onClick={() => window.open('https://superprofile.bio/course/prenatalmoms', '_blank')} className="flex-1">
                   Login
                 </Button>
-                <Button variant="default" onClick={() => window.open('https://superprofile.bio/course/prenatalmoms', '_blank')} className="flex-1">
-                  Join Course (₹1999)
+                <Button variant="default" onClick={() => window.open('https://superprofile.bio/course/prenatalmoms', '_blank')} className="flex-1 font-bold">
+                  Join Now
                 </Button>
               </div>
             </div>

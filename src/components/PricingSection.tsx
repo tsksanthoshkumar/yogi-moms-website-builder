@@ -92,7 +92,7 @@ const PricingSection = ({ onSignup }: PricingSectionProps) => {
                 className="w-full mt-6 py-6 text-lg shadow-gentle hover:shadow-card transition-shadow"
                 onClick={() => window.open('https://superprofile.bio/course/prenatalmoms', '_blank')}
               >
-                Buy Now - ₹1999
+                Join Now
               </Button>
               
               <div 
@@ -106,7 +106,7 @@ const PricingSection = ({ onSignup }: PricingSectionProps) => {
                   Have a question? Message Us
                 </div>
                 <p className="text-xs text-center text-green-700 font-medium">
-                  Only 18 spots left for August month
+                  Only 18 spots left
                 </p>
               </div>
             </CardContent>

@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle } from "lucide-react";
+import FloatingJoinButton from "@/components/FloatingJoinButton";
 
 const PaymentSuccess = () => {
   const navigate = useNavigate();
@@ -76,6 +77,7 @@ const PaymentSuccess = () => {
           </CardContent>
         </Card>
       </div>
+      <FloatingJoinButton />
     </div>
   );
 };

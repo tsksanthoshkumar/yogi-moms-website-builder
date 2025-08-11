@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
+import FloatingJoinButton from "@/components/FloatingJoinButton";
 
 const Dashboard = () => {
   const [userName, setUserName] = useState('');
@@ -158,6 +159,7 @@ const Dashboard = () => {
           </CardContent>
         </Card>
       </div>
+      <FloatingJoinButton />
     </div>
   );
 };

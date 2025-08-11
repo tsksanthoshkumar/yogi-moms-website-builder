@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import AuthModals from "@/components/AuthModals";
 import { useAuth } from "@/hooks/useAuth";
+import FloatingJoinButton from "@/components/FloatingJoinButton";
 
 const Index = () => {
   const auth = useAuth();
@@ -32,6 +33,7 @@ const Index = () => {
       <ContactForm />
       <Footer />
       <WhatsAppFloat />
+      <FloatingJoinButton />
       <AuthModals 
         isSignupOpen={auth.isSignupOpen}
         isLoginOpen={auth.isLoginOpen}

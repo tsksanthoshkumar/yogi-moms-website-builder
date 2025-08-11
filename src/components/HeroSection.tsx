@@ -79,13 +79,13 @@ const HeroSection = ({
             {/* Enhanced CTA Section */}
             <div className="space-y-6">
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" onClick={() => window.open('https://superprofile.bio/course/prenatalmoms', '_blank')} className="px-12 py-6 text-xl font-semibold shadow-gentle hover:shadow-card transition-all duration-300 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary">
-                  Join Course (₹1999)
+                <Button size="lg" onClick={() => window.open('https://superprofile.bio/course/prenatalmoms', '_blank')} className="px-12 py-6 text-xl font-bold shadow-gentle hover:shadow-card transition-all duration-300 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary">
+                  Join Now
                 </Button>
                 <Button variant="outline" size="lg" onClick={() => document.getElementById('program')?.scrollIntoView({
                 behavior: 'smooth'
               })} className="px-8 py-6 text-lg border-2 hover:bg-primary/5">
-                  What's Inside the Course
+                  What's Inside
                 </Button>
               </div>
               
@@ -93,7 +93,7 @@ const HeroSection = ({
               <div className="flex items-center justify-center lg:justify-start text-sm">
                 <div className="flex items-center text-primary">
                   <span className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse"></span>
-                  <span className="font-medium">Only 18 spots left at this price (any trimester can join)</span>
+                  <span className="font-medium">Only 18 spots left (any trimester can join)</span>
                 </div>
               </div>
             </div>
