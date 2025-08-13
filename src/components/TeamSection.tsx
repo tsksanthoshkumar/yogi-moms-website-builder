@@ -7,7 +7,8 @@ const TeamSection = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = React.useState(false);
   const [canScrollRight, setCanScrollRight] = React.useState(true);
-  const [isAutoScrolling, setIsAutoScrolling] = React.useState(true);
+  const [isAutoScrolling, setIsAutoScrolling] = React.useState(false);
+  const [isMobile, setIsMobile] = React.useState(false);
 
   const experts = [
     {
@@ -33,14 +34,23 @@ const TeamSection = () => {
     }
   ];
 
+  // Check if mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   // Auto-scroll functionality (only on desktop)
   useEffect(() => {
     const scrollContainer = scrollRef.current;
-    if (!scrollContainer || !isAutoScrolling) return;
+    if (!scrollContainer || !isAutoScrolling || isMobile) return;
 
-    // Only auto-scroll on desktop
-    const isMobile = window.innerWidth < 768;
-    if (isMobile) return;
+    setIsAutoScrolling(true);
 
     let animationId: number;
     let lastTime = 0;
@@ -59,23 +69,29 @@ const TeamSection = () => {
 
     animationId = requestAnimationFrame(scroll);
     return () => cancelAnimationFrame(animationId);
-  }, [isAutoScrolling]);
+  }, [isAutoScrolling, isMobile]);
 
   const scrollLeft = () => {
     if (scrollRef.current) {
       setIsAutoScrolling(false);
-      scrollRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+      const scrollAmount = isMobile ? 280 : 300;
+      scrollRef.current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
       // Resume auto-scroll after 3 seconds
-      setTimeout(() => setIsAutoScrolling(true), 3000);
+      if (!isMobile) {
+        setTimeout(() => setIsAutoScrolling(true), 3000);
+      }
     }
   };
 
   const scrollRight = () => {
     if (scrollRef.current) {
       setIsAutoScrolling(false);
-      scrollRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+      const scrollAmount = isMobile ? 280 : 300;
+      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
       // Resume auto-scroll after 3 seconds
-      setTimeout(() => setIsAutoScrolling(true), 3000);
+      if (!isMobile) {
+        setTimeout(() => setIsAutoScrolling(true), 3000);
+      }
     }
   };
 
@@ -98,8 +114,10 @@ const TeamSection = () => {
 
   // Pause auto-scroll on user interaction
   const handleUserInteraction = () => {
-    setIsAutoScrolling(false);
-    setTimeout(() => setIsAutoScrolling(true), 5000);
+    if (!isMobile) {
+      setIsAutoScrolling(false);
+      setTimeout(() => setIsAutoScrolling(true), 5000);
+    }
   };
 
   return (
@@ -114,53 +132,55 @@ const TeamSection = () => {
           </p>
         </div>
 
-        {/* Mobile Navigation Buttons */}
-        <div className="flex justify-center items-center mb-8 space-x-4 md:hidden">
+        {/* Mobile Navigation Buttons - Always visible on mobile */}
+        <div className="flex justify-center items-center mb-6 space-x-4 md:hidden">
           <Button
             variant="outline"
             size="icon"
             onClick={scrollLeft}
             disabled={!canScrollLeft}
-            className="h-12 w-12 rounded-full shadow-gentle bg-white hover:bg-gray-50 disabled:opacity-50"
+            className="h-10 w-10 rounded-full shadow-lg bg-white hover:bg-gray-50 disabled:opacity-30 border-2 border-primary/20"
           >
-            <ChevronLeft className="h-5 w-5" />
+            <ChevronLeft className="h-4 w-4 text-primary" />
           </Button>
-          <div className="text-sm text-muted-foreground">
-            Swipe or use buttons to navigate
+          <div className="text-xs text-muted-foreground font-medium">
+            Swipe to see all experts
           </div>
           <Button
             variant="outline"
             size="icon"
             onClick={scrollRight}
             disabled={!canScrollRight}
-            className="h-12 w-12 rounded-full shadow-gentle bg-white hover:bg-gray-50 disabled:opacity-50"
+            className="h-10 w-10 rounded-full shadow-lg bg-white hover:bg-gray-50 disabled:opacity-30 border-2 border-primary/20"
           >
-            <ChevronRight className="h-5 w-5" />
+            <ChevronRight className="h-4 w-4 text-primary" />
           </Button>
         </div>
 
         <div 
           ref={scrollRef}
-          className="overflow-x-auto scrollbar-hide"
+          className="overflow-x-auto scrollbar-hide smooth-scroll"
           style={{ 
             scrollBehavior: 'smooth',
-            WebkitOverflowScrolling: 'touch'
+            WebkitOverflowScrolling: 'touch',
+            scrollSnapType: 'x mandatory'
           }}
           onTouchStart={handleUserInteraction}
           onMouseDown={handleUserInteraction}
         >
-          <div className="flex gap-6 pb-4 min-w-max">
-            {/* Show original experts + duplicates for infinite scroll on desktop */}
-            {(window.innerWidth >= 768 ? [...experts, ...experts] : experts).map((expert, index) => (
+          <div className="flex gap-4 md:gap-6 pb-4 px-4 md:px-0" style={{ minWidth: 'max-content' }}>
+            {/* Show only original experts on mobile, duplicates on desktop */}
+            {(isMobile ? experts : [...experts, ...experts]).map((expert, index) => (
               <Card 
                 key={`${expert.id}-${index}`} 
-                className="flex-shrink-0 w-80 max-w-[85vw] md:max-w-none shadow-gentle border-0 bg-background/90 backdrop-blur-sm rounded-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                className="flex-shrink-0 w-72 md:w-80 shadow-gentle border-0 bg-background/95 backdrop-blur-sm rounded-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                style={{ scrollSnapAlign: 'center' }}
               >
-                <CardContent className="p-6 md:p-8">
+                <CardContent className="p-4 md:p-8">
                   <div className="flex flex-col items-center text-center space-y-4">
                     {/* Circular Image */}
                     <div className="relative">
-                      <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden bg-gradient-to-br from-purple-400 to-pink-400 p-1 transition-transform duration-300">
+                      <div className="w-20 h-20 md:w-32 md:h-32 rounded-full overflow-hidden bg-gradient-to-br from-purple-400 to-pink-400 p-1 transition-transform duration-300">
                         <img
                           src={expert.image}
                           alt={expert.name}
@@ -174,7 +194,7 @@ const TeamSection = () => {
                       <h3 className="text-lg md:text-xl font-bold text-foreground">
                         {expert.name}
                       </h3>
-                      <p className="text-sm md:text-base font-medium text-primary">
+                      <p className="text-xs md:text-base font-medium text-primary">
                         {expert.title}
                       </p>
                       <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
@@ -188,33 +208,23 @@ const TeamSection = () => {
           </div>
         </div>
 
-        {/* Desktop hint */}
-        <div className="hidden md:block text-center mt-4">
+        {/* Desktop hint - only show when auto-scroll is active */}
+        <div className="hidden md:block text-center mt-4" style={{ opacity: isAutoScrolling ? 1 : 0.7 }}>
           <p className="text-sm text-muted-foreground">
-            Cards auto-scroll • Hover to pause
+            {isAutoScrolling ? 'Cards auto-scroll • Hover to pause' : 'Hover over cards to resume auto-scroll'}
           </p>
         </div>
       </div>
       
       <style jsx>{`
-        .scrollbar-hide {
+        .smooth-scroll {
           -ms-overflow-style: none;
           scrollbar-width: none;
+          scroll-padding: 16px;
         }
         
-        .scrollbar-hide::-webkit-scrollbar {
+        .smooth-scroll::-webkit-scrollbar {
           display: none;
-        }
-        
-        @media (max-width: 768px) {
-          .scrollbar-hide {
-            scroll-snap-type: x mandatory;
-            scroll-padding: 1rem;
-          }
-          
-          .scrollbar-hide > div > div {
-            scroll-snap-align: center;
-          }
         }
       `}</style>
     </section>
