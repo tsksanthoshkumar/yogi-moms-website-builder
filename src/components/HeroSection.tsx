@@ -32,6 +32,15 @@ const HeroSection = ({
               with yoga
             </h1>
             
+            {/* Course Description */}
+            <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-4 lg:p-6 border border-primary/20 backdrop-blur-sm">
+              <p className="text-sm lg:text-base text-foreground font-medium leading-relaxed">
+                <span className="text-primary font-semibold">Complete Package:</span>{' '}
+                Yoga (9 Months) + Diet Plans (Veg/Non-Veg, North & South) + Husband's Guide + 
+                Pregnancy Journal + eBook + 5 Daily Activities for Dads (9 Months)
+              </p>
+            </div>
+            
             <p className="text-xl lg:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
               Join <span className="font-semibold text-primary">10,000+ mothers</span> who discovered the secret to a 
               <span className="font-semibold"> healthier, happier pregnancy</span> through our scientifically-designed yoga program.
