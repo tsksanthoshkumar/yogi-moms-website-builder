@@ -29,6 +29,14 @@ const Dashboard = () => {
 
     setUserEmail(email);
     setUserName(name || 'Student');
+    
+    // Fire Facebook Pixel Purchase event when user accesses course dashboard (indicates successful payment)
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'Purchase', {
+        value: 1999.00,
+        currency: 'INR'
+      });
+    }
   }, [navigate, toast]);
 
   const handleLogout = () => {

@@ -37,6 +37,12 @@ const AuthModals = ({
 
   const handleSignupSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Fire Facebook Pixel Lead event for signup form submission
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'Lead');
+    }
+    
     // Redirect to SuperProfile course
     window.open('https://superprofile.bio/course/prenatalmoms', '_blank');
     onSignupClose();

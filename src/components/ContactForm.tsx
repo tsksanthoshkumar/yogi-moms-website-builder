@@ -33,6 +33,10 @@ const ContactForm = () => {
         description: "Your information has been submitted successfully. We'll contact you soon!"
       });
 
+      // Fire Facebook Pixel Lead event after successful form submission
+      if (typeof window !== 'undefined' && window.fbq) {
+        window.fbq('track', 'Lead');
+      }
       // Reset form
       setFormData({
         name: '',

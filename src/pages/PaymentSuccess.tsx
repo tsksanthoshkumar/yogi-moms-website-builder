@@ -16,6 +16,14 @@ const PaymentSuccess = () => {
       title: "Payment Successful! 🎉",
       description: "You can now log in using the same email and password.",
     });
+    
+    // Fire Facebook Pixel Purchase event after successful payment
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'Purchase', {
+        value: 1999.00,
+        currency: 'INR'
+      });
+    }
   }, [toast]);
 
   return (
