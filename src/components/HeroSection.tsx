@@ -21,7 +21,7 @@ const HeroSection = ({
           <div className="text-center lg:text-left space-y-8">
             {/* Announcement Banner */}
             <div className="inline-flex items-center bg-gradient-to-r from-primary/10 to-accent/10 px-4 py-2 rounded-full border border-primary/20">
-              <span className="text-primary font-medium text-sm">🎉 Get This All for Just ₹499</span>
+              <span className="text-primary font-medium text-sm">🌟 Limited Time: Save ₹2000 Today!</span>
             </div>
             
             <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
