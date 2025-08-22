@@ -20,7 +20,7 @@ const PaymentSuccess = () => {
     // Fire Facebook Pixel Purchase event after successful payment
     if (typeof window !== 'undefined' && window.fbq) {
       window.fbq('track', 'Purchase', {
-        value: 1999.00,
+        value: 499.00,
         currency: 'INR'
       });
     }
@@ -47,7 +47,7 @@ const PaymentSuccess = () => {
                 ✅ Payment Confirmed
               </h3>
               <p className="text-sm text-green-800">
-                Your ₹1999 payment has been processed successfully. You now have full access to our premium prenatal course content.
+                Your ₹499 payment has been processed successfully. You now have full access to our premium prenatal course content.
               </p>
             </div>
 
