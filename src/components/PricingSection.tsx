@@ -40,7 +40,7 @@ const PricingSection = ({ onSignup }: PricingSectionProps) => {
               </CardTitle>
               <div className="mt-4">
                 <div className="text-4xl font-bold text-primary">₹499</div>
-                <div className="text-sm text-muted-foreground line-through">₹3999</div>
+                <div className="text-sm text-muted-foreground line-through">₹1999</div>
                 <div className="text-sm text-muted-foreground mt-1">
                   One-Time Payment • Lifetime access
                 </div>
