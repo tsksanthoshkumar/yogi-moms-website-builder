@@ -74,59 +74,22 @@ const ProgramSection = () => {
         {/* Program Content */}
         {/* Payment Flow Information */}
         <div className="mb-12">
-          <div className="bg-gradient-to-r from-green-50 via-blue-50 to-purple-50 rounded-2xl p-6 md:p-8 border border-green-200 shadow-gentle">
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-6 md:p-8 border border-green-200 shadow-gentle">
             <div className="text-center">
-              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-6 flex items-center justify-center gap-2">
+              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 flex items-center justify-center gap-2">
                 <span className="text-green-500">✅</span>
                 How It Works After Payment
               </h3>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                {/* Option 1 */}
-                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 md:p-6 shadow-gentle border border-green-100">
-                  <div className="flex flex-col items-center text-center space-y-3">
-                    <div className="text-2xl md:text-3xl font-bold text-green-600">Option 1</div>
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-center gap-2 text-sm md:text-base">
-                        <span className="font-semibold text-foreground">Payment Done</span>
-                        <span className="text-green-500 text-lg">✅</span>
-                      </div>
-                      <div className="flex items-center justify-center gap-2 text-sm md:text-base text-muted-foreground">
-                        <span>↓</span>
-                      </div>
-                      <div className="text-sm md:text-base text-foreground">
-                        <span className="font-semibold">Redirects to Course Page</span>
-                        <span className="text-muted-foreground"> → </span>
-                        <span className="font-semibold text-primary">Auto Login with Registered Email</span>
-                        <span className="text-xl ml-2">🎉</span>
-                      </div>
-                    </div>
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 md:p-6 shadow-gentle border border-green-100 max-w-2xl mx-auto">
+                <div className="space-y-3 text-center">
+                  <div className="text-base md:text-lg text-foreground">
+                    <span className="font-bold text-green-600">After Payment:</span> Redirects to course automatically
+                  </div>
+                  <div className="text-sm md:text-base text-muted-foreground">
+                    Want to login again? Use your registered email ID or password
                   </div>
                 </div>
-
-                {/* Option 2 */}
-                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 md:p-6 shadow-gentle border border-blue-100">
-                  <div className="flex flex-col items-center text-center space-y-3">
-                    <div className="text-2xl md:text-3xl font-bold text-blue-600">Option 2</div>
-                    <div className="space-y-2">
-                      <div className="text-sm md:text-base text-foreground">
-                        <span className="font-semibold">Login Anytime</span>
-                        <span className="text-muted-foreground"> → </span>
-                        <span className="font-semibold">Website</span>
-                      </div>
-                      <div className="flex items-center justify-center gap-2 text-sm md:text-base text-muted-foreground">
-                        <span>↓</span>
-                      </div>
-                      <div className="text-sm md:text-base text-foreground">
-                        <span className="font-semibold text-primary">Use Same Email / Phone Number</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="mt-6 text-sm text-muted-foreground">
-                <span className="font-medium">💡 Pro Tip:</span> Save your login details for easy access to your course content anytime!
               </div>
             </div>
           </div>
