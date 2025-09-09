@@ -26,7 +26,7 @@ const HeroSection = ({
             
             <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
               For You, For Baby{' '}
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <span className="text-primary">
                 Make your
                 pregnancy easier
               </span>{' '}
