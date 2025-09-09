@@ -30,7 +30,8 @@ const HeroSection = ({
                 “Make your
                  </span>{' '}
               pregnancy
-              </span>{' '}easier
+              </span>{' '}
+            easier
               </span>{' '}
               with yoga
             </h1>
