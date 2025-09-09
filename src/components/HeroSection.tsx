@@ -27,7 +27,9 @@ const HeroSection = ({
             <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
               For You, For Baby{' '}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                “Make your pregnancy easier
+                “Make your
+                 </span>{' '}
+              pregnancy easier
               </span>{' '}
               with yoga
             </h1>
