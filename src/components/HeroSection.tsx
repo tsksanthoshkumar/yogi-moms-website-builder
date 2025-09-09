@@ -29,7 +29,8 @@ const HeroSection = ({
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 “Make your
                  </span>{' '}
-              pregnancy easier
+              pregnancy
+              </span>{' '}easier
               </span>{' '}
               with yoga
             </h1>
