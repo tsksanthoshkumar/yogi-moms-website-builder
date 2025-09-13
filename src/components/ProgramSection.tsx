@@ -146,6 +146,29 @@ const ProgramSection = () => {
             </div>
           </div>
         </div>
+        {/* Program Content */}
+        {/* Payment Flow Information */}
+        <div className="mb-12">
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-6 md:p-8 border border-green-200 shadow-gentle">
+            <div className="text-center">
+              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 flex items-center justify-center gap-2">
+                <span className="text-green-500">✅</span>
+                How It Works After Payment
+              </h3>
+              
+              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 md:p-6 shadow-gentle border border-green-100 max-w-2xl mx-auto">
+                <div className="space-y-3 text-center">
+                  <div className="text-base md:text-lg text-foreground">
+                    <span className="font-bold text-green-600">After Payment:</span> Redirects to course automatically
+                  </div>
+                  <div className="text-sm md:text-base text-muted-foreground">
+                    Want to login again? Use your registered email ID or Phone number
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {programContent.map((phase, index) => (
             <Card key={index} className="border border-border shadow-gentle hover:shadow-card transition-shadow duration-300">
