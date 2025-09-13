@@ -115,7 +115,7 @@ const HeroSection = ({
                 <div className="text-sm text-muted-foreground">Happy Mothers</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">9 months</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">1</div>
                 <div className="text-sm text-muted-foreground">One-Time Payment</div>
               </div>
               <div className="text-center lg:text-left">
