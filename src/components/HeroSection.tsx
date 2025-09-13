@@ -57,7 +57,7 @@ const HeroSection = ({
                 <img src="/lovable-uploads/d7f9fe46-3d7b-4786-a290-6b40eae24950.png" alt="Happy mother" className="w-8 h-8 rounded-full border-2 border-background object-cover object-center" />
               </div>
               <span className="text-muted-foreground">
-                <span className="font-semibold text-foreground">729+ mothers</span> joined this week
+                <span className="font-semibold text-foreground">279+ mothers</span> joined this week
               </span>
             </div>
             
