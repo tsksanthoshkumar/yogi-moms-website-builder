@@ -87,7 +87,7 @@ const ProgramSection = () => {
                     <span className="font-bold text-green-600">After Payment:</span> Redirects to course automatically
                   </div>
                   <div className="text-sm md:text-base text-muted-foreground">
-                    Want to login again? Use your registered email ID or password
+                    Want to login again? Use your registered email ID or Phone number
                   </div>
                 </div>
               </div>
