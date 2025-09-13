@@ -30,7 +30,7 @@ const HeroSection = ({
                 Make your
                 pregnancy easier
               </span>{' '}
-              with yoga
+              with our program
             </h1>
             
             {/* Course Description */}
@@ -44,7 +44,7 @@ const HeroSection = ({
             
             <p className="text-xl lg:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
               Join <span className="font-semibold text-primary">10,000+ mothers</span> who discovered the secret to a 
-              <span className="font-semibold"> healthier, happier pregnancy</span> through our scientifically-designed yoga program.
+              <span className="font-semibold"> healthier, happier pregnancy</span> through our scientifically-designed  program.
             </p>
 
 
