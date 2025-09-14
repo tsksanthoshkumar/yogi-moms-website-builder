@@ -60,6 +60,7 @@ const ProgramSection = () => {
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
             What's Inside the Course
           </h2>
+        </div>
 
         {/* Course Content Overview Card */}
         <div className="mb-16">
