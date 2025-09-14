@@ -1,7 +1,6 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import BenefitsSection from "@/components/BenefitsSection";
-import YogaAnimationSection from "@/components/YogaAnimationSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import AboutSection from "@/components/AboutSection";
 import ProgramSection from "@/components/ProgramSection";
@@ -22,7 +21,6 @@ const Index = () => {
       <Navigation onLogin={auth.openLogin} onSignup={auth.openSignup} />
       <HeroSection onSignup={auth.openSignup} />
       <BenefitsSection />
-      <YogaAnimationSection />
       <AboutSection />
       <ProgramSection />
       <div id="reviews">
