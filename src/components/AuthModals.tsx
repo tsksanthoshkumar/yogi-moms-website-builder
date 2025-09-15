@@ -44,14 +44,14 @@ const AuthModals = ({
     }
     
     // Redirect to SuperProfile course
-    window.open('https://superprofile.bio/course/prenatalmoms', '_blank');
+    window.open('https://rzp.io/rzp/prenatal-mom', '_blank');
     onSignupClose();
   };
 
   const handleLoginSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Redirect to SuperProfile course
-    window.open('https://superprofile.bio/course/prenatalmoms', '_blank');
+    window.open('https://rzp.io/rzp/prenatal-mom', '_blank');
     onLoginClose();
   };
 
