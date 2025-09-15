@@ -89,7 +89,7 @@ const HeroSection = ({
             {/* Enhanced CTA Section */}
             <div className="space-y-6">
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" onClick={() => window.open('https://superprofile.bio/course/prenatalmoms', '_blank')} className="px-12 py-6 text-xl font-bold shadow-gentle hover:shadow-card transition-all duration-300 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary">
+                <Button size="lg" onClick={() => window.open('https://rzp.io/rzp/prenatal-mom', '_blank')} className="px-12 py-6 text-xl font-bold shadow-gentle hover:shadow-card transition-all duration-300 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary">
                   Join Now
                 </Button>
                 <Button variant="outline" size="lg" onClick={() => document.getElementById('program')?.scrollIntoView({
