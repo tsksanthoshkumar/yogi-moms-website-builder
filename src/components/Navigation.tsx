@@ -71,10 +71,10 @@ const Navigation = ({ onLogin, onSignup }: NavigationProps) => {
             <button onClick={() => scrollToSection('contact')} className="text-foreground hover:text-primary transition-colors">
               Contact
             </button>
-            <Button variant="outline" onClick={() => window.open('https://superprofile.bio/course/prenatalmoms', '_blank')}>
+            <Button variant="outline" onClick={() => window.open('https://rzp.io/rzp/prenatal-mom', '_blank')}>
               Login
             </Button>
-            <Button variant="default" onClick={() => window.open('https://superprofile.bio/course/prenatalmoms', '_blank')} className="font-bold">
+            <Button variant="default" onClick={() => window.open('https://rzp.io/rzp/prenatal-mom', '_blank')} className="font-bold">
               Join Now
             </Button>
           </div>
