@@ -37,7 +37,7 @@ const HeroSection = ({
             <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-4 lg:p-6 border border-primary/20 backdrop-blur-sm">
               <p className="text-sm lg:text-base text-foreground font-medium leading-relaxed">
                 <span className="text-primary font-semibold">Complete Package:</span>{' '}
-                Yoga (9 Months) + Diet Plans (Veg/Non-Veg, North & South) + Husband's Guide + 
+                Yoga (9 Months) + Diet Plans (Veg/Non-Veg) + Husband's Guide + 
                 Pregnancy Journal + eBook + 5 Daily Activities for Dads (9 Months)
               </p>
             </div>
