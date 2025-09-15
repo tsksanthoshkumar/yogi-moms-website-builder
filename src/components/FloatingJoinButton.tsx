@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const FloatingJoinButton = () => {
   const handleJoinNow = () => {
-    window.open('https://superprofile.bio/course/prenatalmoms', '_blank');
+    window.open('https://rzp.io/rzp/prenatal-mom', '_blank');
   };
 
   return (
