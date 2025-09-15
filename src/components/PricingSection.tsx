@@ -90,7 +90,7 @@ const PricingSection = ({ onSignup }: PricingSectionProps) => {
               <Button 
                 size="lg" 
                 className="w-full mt-6 py-6 text-lg shadow-gentle hover:shadow-card transition-shadow"
-                onClick={() => window.open('https://superprofile.bio/course/prenatalmoms', '_blank')}
+                onClick={() => window.open('https://rzp.io/rzp/prenatal-mom', '_blank')}
               >
                 Join Now
               </Button>
