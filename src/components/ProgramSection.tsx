@@ -126,7 +126,7 @@ const ProgramSection = () => {
               <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 md:p-6 shadow-gentle border border-green-100 max-w-2xl mx-auto">
                 <div className="space-y-3 text-center">
                   <div className="text-base md:text-lg text-foreground">
-                    <span className="font-bold text-green-600">After Payment:</span> Redirects to course automatically
+                    <span className="font-bold text-green-600">After Payment:</span> Redirects to program automatically
                   </div>
                   <div className="text-sm md:text-base text-muted-foreground">
                     Want to login again? Use your registered email ID or Phone number
