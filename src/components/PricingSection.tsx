@@ -100,13 +100,20 @@ const PricingSection = ({ onSignup }: PricingSectionProps) => {
                 <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                   <iframe
                     className="absolute top-0 left-0 w-full h-full"
-                    src="https://www.youtube.com/embed/GZTLONL15iY"
-                    title="Prenatal Yoga Video"
+                    src="https://www.youtube.com/embed/KD5Yl-63b98"
+                    title="Prenatal Yoga Course Preview"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />
                 </div>
+              </div>
+              
+              {/* Payment Info */}
+              <div className="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                <p className="text-sm text-center text-blue-700 font-medium">
+                  ✨ After payment you will be directed to course automatically
+                </p>
               </div>
               
               <div 
