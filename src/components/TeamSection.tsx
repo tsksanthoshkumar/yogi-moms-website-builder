@@ -216,7 +216,7 @@ const TeamSection = () => {
         </div>
       </div>
       
-      <style jsx>{`
+      <style>{`
         .smooth-scroll {
           -ms-overflow-style: none;
           scrollbar-width: none;
