@@ -15,16 +15,16 @@ const HeroSection = ({
       });
     }
   };
-  return <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-hero pt-20">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="text-center lg:text-left space-y-8">
+  return <section id="home" className="min-h-[80vh] md:min-h-screen flex items-center justify-center bg-gradient-hero pt-16 md:pt-20">
+      <div className="container mx-auto px-4 py-8 md:py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 items-center">
+          <div className="text-center lg:text-left space-y-4 md:space-y-8">
             {/* Announcement Banner */}
             <div className="inline-flex items-center bg-gradient-to-r from-primary/10 to-accent/10 px-4 py-2 rounded-full border border-primary/20">
               <span className="text-primary font-medium text-sm">🌟 Limited Time: Save ₹1500 Today!</span>
             </div>
             
-            <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
+            <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-foreground leading-tight">
               For You, For Baby{' '}
               <span className="text-primary">
                 Make your
@@ -34,15 +34,15 @@ const HeroSection = ({
             </h1>
             
             {/* Course Description */}
-            <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-4 lg:p-6 border border-primary/20 backdrop-blur-sm">
-              <p className="text-sm lg:text-base text-foreground font-medium leading-relaxed">
+            <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-3 md:p-4 lg:p-6 border border-primary/20 backdrop-blur-sm">
+              <p className="text-xs md:text-sm lg:text-base text-foreground font-medium leading-relaxed">
                 <span className="text-primary font-semibold">Complete Package:</span>{' '}
                 Yoga (9 Months) + Diet Plans (Veg/Non-Veg) + Husband's Guide + 
                 Pregnancy Journal + eBook + 5 Daily Activities for Dads (9 Months)
               </p>
             </div>
             
-            <p className="text-xl lg:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
+            <p className="text-base md:text-xl lg:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
               Join <span className="font-semibold text-primary">10,000+ mothers</span> who discovered the secret to a 
               <span className="font-semibold"> healthier, happier pregnancy</span> through our scientifically-designed  program.
             </p>
@@ -62,39 +62,39 @@ const HeroSection = ({
             </div>
             
             {/* Enhanced Trust Indicators */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <div className="flex items-center bg-gradient-to-r from-primary/5 to-primary/10 px-4 py-3 rounded-xl border border-primary/20">
-                <span className="text-green-500 mr-3 text-lg">✓</span>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-3">
+              <div className="flex items-center bg-gradient-to-r from-primary/5 to-primary/10 px-2 md:px-4 py-2 md:py-3 rounded-xl border border-primary/20">
+                <span className="text-green-500 mr-2 md:mr-3 text-sm md:text-lg">✓</span>
                 <div className="text-left">
-                  <div className="text-sm font-semibold text-foreground">Lifetime Access</div>
-                  <div className="text-xs text-muted-foreground">Never expires</div>
+                  <div className="text-xs md:text-sm font-semibold text-foreground">Lifetime Access</div>
+                  <div className="text-xs text-muted-foreground hidden md:block">Never expires</div>
                 </div>
               </div>
-              <div className="flex items-center bg-gradient-to-r from-accent/5 to-accent/10 px-4 py-3 rounded-xl border border-accent/20">
-                <span className="text-green-500 mr-3 text-lg">✓</span>
+              <div className="flex items-center bg-gradient-to-r from-accent/5 to-accent/10 px-2 md:px-4 py-2 md:py-3 rounded-xl border border-accent/20">
+                <span className="text-green-500 mr-2 md:mr-3 text-sm md:text-lg">✓</span>
                 <div className="text-left">
-                  <div className="text-sm font-semibold text-foreground">For Natural Birth exercises</div>
-                  <div className="text-xs text-muted-foreground">100% Safe</div>
+                  <div className="text-xs md:text-sm font-semibold text-foreground">Natural Birth</div>
+                  <div className="text-xs text-muted-foreground hidden md:block">100% Safe</div>
                 </div>
               </div>
-              <div className="flex items-center bg-gradient-to-r from-primary/5 to-accent/10 px-4 py-3 rounded-xl border border-primary/20">
-                <span className="text-green-500 mr-3 text-lg">✓</span>
+              <div className="flex items-center bg-gradient-to-r from-primary/5 to-accent/10 px-2 md:px-4 py-2 md:py-3 rounded-xl border border-primary/20">
+                <span className="text-green-500 mr-2 md:mr-3 text-sm md:text-lg">✓</span>
                 <div className="text-left">
-                  <div className="text-sm font-semibold text-foreground">Instant Access</div>
-                  <div className="text-xs text-muted-foreground">Start today</div>
+                  <div className="text-xs md:text-sm font-semibold text-foreground">Instant Access</div>
+                  <div className="text-xs text-muted-foreground hidden md:block">Start today</div>
                 </div>
               </div>
             </div>
             
             {/* Enhanced CTA Section */}
-            <div className="space-y-6">
+            <div className="space-y-3 md:space-y-6">
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" onClick={() => window.open('https://rzp.io/rzp/prenatal-mom', '_blank')} className="px-12 py-6 text-xl font-bold shadow-gentle hover:shadow-card transition-all duration-300 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary">
+                <Button size="lg" onClick={() => window.open('https://rzp.io/rzp/prenatal-mom', '_blank')} className="px-8 md:px-12 py-4 md:py-6 text-lg md:text-xl font-bold shadow-gentle hover:shadow-card transition-all duration-300 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary">
                   Join Now
                 </Button>
                 <Button variant="outline" size="lg" onClick={() => document.getElementById('program')?.scrollIntoView({
                 behavior: 'smooth'
-              })} className="px-8 py-6 text-lg border-2 hover:bg-primary/5">
+              })} className="px-6 md:px-8 py-4 md:py-6 text-base md:text-lg border-2 hover:bg-primary/5">
                   What's Inside
                 </Button>
               </div>
@@ -109,18 +109,18 @@ const HeroSection = ({
             </div>
 
             {/* Enhanced Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border/50">
+            <div className="grid grid-cols-3 gap-3 md:gap-6 pt-4 md:pt-8 border-t border-border/50">
               <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">10,000+</div>
-                <div className="text-sm text-muted-foreground">Happy Mothers</div>
+                <div className="text-xl md:text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">10,000+</div>
+                <div className="text-xs md:text-sm text-muted-foreground">Happy Mothers</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">1</div>
-                <div className="text-sm text-muted-foreground">One-Time Payment</div>
+                <div className="text-xl md:text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">1</div>
+                <div className="text-xs md:text-sm text-muted-foreground">One-Time Payment</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">4.9★</div>
-                <div className="text-sm text-muted-foreground">Average Rating</div>
+                <div className="text-xl md:text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">4.9★</div>
+                <div className="text-xs md:text-sm text-muted-foreground">Average Rating</div>
               </div>
             </div>
           </div>
