@@ -21,14 +21,12 @@ const Index = () => {
       <Navigation onLogin={auth.openLogin} onSignup={auth.openSignup} />
       <HeroSection onSignup={auth.openSignup} />
       <BenefitsSection />
-      <AboutSection />
       <ProgramSection />
       <div id="reviews">
         <TestimonialsSection />
       </div>
       <PricingSection onSignup={auth.openSignup} />
       <TeamSection />
-      <ContactForm />
       <Footer />
       <WhatsAppFloat />
       <FloatingJoinButton />
