@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-yoga.jpg";
+import heroImage from "@/assets/hero-yoga-new.webp";
 interface HeroSectionProps {
   onSignup: () => void;
 }
