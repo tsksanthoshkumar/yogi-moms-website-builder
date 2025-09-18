@@ -60,8 +60,6 @@ const ContactForm = () => {
       [e.target.name]: e.target.value
     });
   };
-  return <section className="py-20 bg-gradient-to-br from-pink-50 to-purple-50">
-      
-    </section>;
+  return null;
 };
 export default ContactForm;
