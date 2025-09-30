@@ -22,7 +22,14 @@ const CoursePage = () => {
         { name: "Yoga II", free: false },
         { name: "Yoga to beat Fatigue", free: false },
         { name: "Yoga to Relieve Tension", free: false },
-        { name: "Full Body Workout I & II", free: false }
+        { name: "Full Body Workout I", free: false },
+        { name: "Full Body Workout II", free: false },
+        { name: "Morning Energizer Routine", free: false },
+        { name: "Evening Relaxation Yoga", free: false },
+        { name: "Breathing Techniques for First Trimester", free: false },
+        { name: "Gentle Stretches for Early Pregnancy", free: false },
+        { name: "Core Stability Exercises", free: false },
+        { name: "Pelvic Floor Awareness", free: false }
       ]
     },
     {
@@ -33,7 +40,16 @@ const CoursePage = () => {
         { name: "Workout for Back & Hip Pain", free: false },
         { name: "Workout for Diastasis Relief", free: false },
         { name: "Workout using Band", free: false },
-        { name: "Workout for Sciatica Pain", free: false }
+        { name: "Workout for Sciatica Pain", free: false },
+        { name: "Balance & Stability Exercises", free: false },
+        { name: "Prenatal Cardio Workout", free: false },
+        { name: "Upper Body Strengthening", free: false },
+        { name: "Lower Body Toning", free: false },
+        { name: "Yoga for Better Sleep", free: false },
+        { name: "Breathing for Labor Preparation", free: false },
+        { name: "Partner Exercises", free: false },
+        { name: "Meditation for Baby Connection", free: false },
+        { name: "Posture Improvement Exercises", free: false }
       ]
     },
     {
@@ -45,31 +61,50 @@ const CoursePage = () => {
         { name: "Workout for Glutes", free: false },
         { name: "Workout for Pelvic Floor & Hip Opening", free: false },
         { name: "Stretches", free: false },
-        { name: "General Workout", free: false }
+        { name: "General Workout", free: false },
+        { name: "Labor Preparation Exercises", free: false },
+        { name: "Birthing Ball Exercises", free: false },
+        { name: "Final Weeks Gentle Movement", free: false }
       ]
     },
     {
       title: "Prenatal Yoga in Hindi",
       items: [
-        { name: "Breathing Exercises", free: false },
-        { name: "Yoga for First Trimester (I & II)", free: false },
-        { name: "Yoga for Second Trimester (I & II)", free: false },
-        { name: "Yoga for Third Trimester (I & II)", free: false },
-        { name: "Yoga for Constipation & Acidity", free: false },
-        { name: "Yoga for Back Pain", free: false },
-        { name: "Yoga for Swelling During Pregnancy", free: false },
-        { name: "Yoga for Normal Delivery", free: false },
-        { name: "Yoga for Vaginal Delivery (9th Month)", free: false }
+        { name: "प्राणायाम अभ्यास (Breathing Exercises)", free: false },
+        { name: "पहली तिमाही योग - भाग 1 (First Trimester Yoga - Part 1)", free: false },
+        { name: "पहली तिमाही योग - भाग 2 (First Trimester Yoga - Part 2)", free: false },
+        { name: "दूसरी तिमाही योग - भाग 1 (Second Trimester Yoga - Part 1)", free: false },
+        { name: "दूसरी तिमाही योग - भाग 2 (Second Trimester Yoga - Part 2)", free: false },
+        { name: "तीसरी तिमाही योग - भाग 1 (Third Trimester Yoga - Part 1)", free: false },
+        { name: "तीसरी तिमाही योग - भाग 2 (Third Trimester Yoga - Part 2)", free: false },
+        { name: "कब्ज और एसिडिटी के लिए योग (Yoga for Constipation & Acidity)", free: false },
+        { name: "पीठ दर्द के लिए योग (Yoga for Back Pain)", free: false },
+        { name: "गर्भावस्था में सूजन के लिए योग (Yoga for Swelling)", free: false },
+        { name: "सामान्य प्रसव के लिए योग (Yoga for Normal Delivery)", free: false },
+        { name: "नौवें महीने का विशेष योग (9th Month Special Yoga)", free: false },
+        { name: "श्रोणि तल व्यायाम (Pelvic Floor Exercises)", free: false },
+        { name: "तनाव मुक्ति योग (Stress Relief Yoga)", free: false },
+        { name: "सुबह की दिनचर्या (Morning Routine)", free: false },
+        { name: "शाम की दिनचर्या (Evening Routine)", free: false },
+        { name: "गर्भावस्था में ध्यान (Pregnancy Meditation)", free: false },
+        { name: "शिशु से जुड़ाव बढ़ाने के अभ्यास (Baby Bonding Exercises)", free: false },
+        { name: "प्रसव की तैयारी (Labor Preparation)", free: false },
+        { name: "साँस लेने की तकनीक (Breathing Techniques)", free: false },
+        { name: "कोमल व्यायाम (Gentle Exercises)", free: false },
+        { name: "शक्ति प्रशिक्षण (Strength Training)", free: false },
+        { name: "लचीलापन बढ़ाने के व्यायाम (Flexibility Exercises)", free: false },
+        { name: "संतुलन अभ्यास (Balance Practice)", free: false },
+        { name: "अंतिम सप्ताह की तैयारी (Final Weeks Preparation)", free: false }
       ]
     },
     {
-      title: "Diet Plans, Journal & Husband's Guide (PDFs)",
+      title: "Resources & Guides",
       items: [
-        { name: "Pregnancy Journal", free: false },
-        { name: "Trimester Diet Plan", free: false },
-        { name: "General Diet Plan", free: false },
-        { name: "Mom's Guide", free: false },
-        { name: "Father's Guide", free: false }
+        { name: "Complete Pregnancy Journal", free: false },
+        { name: "Trimester-wise Diet Plans", free: false },
+        { name: "Hospital Bag Checklist", free: false },
+        { name: "Father's Support Guide", free: false },
+        { name: "Labor & Delivery Preparation Guide", free: false }
       ]
     }
   ];
