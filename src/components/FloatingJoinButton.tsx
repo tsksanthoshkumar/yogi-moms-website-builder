@@ -1,9 +1,12 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { useNavigate } from 'react-router-dom';
 
 const FloatingJoinButton = () => {
+  const navigate = useNavigate();
+  
   const handleJoinNow = () => {
-    window.open('https://rzp.io/rzp/prenatal-mom', '_blank');
+    navigate('/course');
   };
 
   return (

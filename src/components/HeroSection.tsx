@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { useNavigate } from 'react-router-dom';
 import heroImage from "@/assets/hero-yoga-new.webp";
 interface HeroSectionProps {
   onSignup: () => void;
@@ -7,6 +8,8 @@ interface HeroSectionProps {
 const HeroSection = ({
   onSignup
 }: HeroSectionProps) => {
+  const navigate = useNavigate();
+  
   const scrollToPricing = () => {
     const element = document.getElementById('pricing');
     if (element) {
@@ -89,7 +92,7 @@ const HeroSection = ({
             {/* Enhanced CTA Section */}
             <div className="space-y-3 md:space-y-6">
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" onClick={() => window.open('https://rzp.io/rzp/prenatal-mom', '_blank')} className="px-8 md:px-12 py-4 md:py-6 text-lg md:text-xl font-bold shadow-gentle hover:shadow-card transition-all duration-300 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary">
+                <Button size="lg" onClick={() => navigate('/course')} className="px-8 md:px-12 py-4 md:py-6 text-lg md:text-xl font-bold shadow-gentle hover:shadow-card transition-all duration-300 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary">
                   Join Now
                 </Button>
                 <Button variant="outline" size="lg" onClick={() => document.getElementById('program')?.scrollIntoView({

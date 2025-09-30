@@ -2,12 +2,15 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useNavigate } from 'react-router-dom';
 
 interface PricingSectionProps {
   onSignup: () => void;
 }
 
 const PricingSection = ({ onSignup }: PricingSectionProps) => {
+  const navigate = useNavigate();
+  
   const handleWhatsAppClick = () => {
     const message = "Hi! I have a question about the prenatal yoga program.";
     const whatsappUrl = `https://wa.me/917013805271?text=${encodeURIComponent(message)}`;
@@ -90,7 +93,7 @@ const PricingSection = ({ onSignup }: PricingSectionProps) => {
               <Button 
                 size="lg" 
                 className="w-full mt-6 py-6 text-lg shadow-gentle hover:shadow-card transition-shadow"
-                onClick={() => window.open('https://rzp.io/rzp/prenatal-mom', '_blank')}
+                onClick={() => navigate('/course')}
               >
                 Join Now
               </Button>

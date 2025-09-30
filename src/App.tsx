@@ -11,6 +11,7 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import PaymentSuccess from "./pages/PaymentSuccess";
+import CoursePage from "./pages/CoursePage";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/course" element={<CoursePage />} />
           <Route path="/yoga-exercises" element={<YogaExercises />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/signup" element={<Signup />} />
