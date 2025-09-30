@@ -15,20 +15,20 @@ const CoursePage = () => {
     {
       title: "Prenatal Yoga for Trimester I",
       items: [
-        { name: "Meditation Music", free: true },
-        { name: "Pilates Workout I", free: true },
-        { name: "Pilates Workout II", free: true },
-        { name: "Yoga I", free: true },
-        { name: "Yoga II", free: true },
-        { name: "Yoga to beat Fatigue", free: true },
-        { name: "Yoga to Relieve Tension", free: true },
-        { name: "Full Body Workout I & II", free: true }
+        { name: "Meditation Music", free: false },
+        { name: "Pilates Workout I", free: false },
+        { name: "Pilates Workout II", free: false },
+        { name: "Yoga I", free: false },
+        { name: "Yoga II", free: false },
+        { name: "Yoga to beat Fatigue", free: false },
+        { name: "Yoga to Relieve Tension", free: false },
+        { name: "Full Body Workout I & II", free: false }
       ]
     },
     {
       title: "Prenatal Yoga for Trimester II",
       items: [
-        { name: "Pilates Workout", free: true },
+        { name: "Pilates Workout", free: false },
         { name: "Yoga for Stress Relief", free: false },
         { name: "Workout for Back & Hip Pain", free: false },
         { name: "Workout for Diastasis Relief", free: false },
@@ -269,18 +269,12 @@ const CoursePage = () => {
                     {section.items.map((item, itemIndex) => (
                       <div key={itemIndex} className="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-gray-50">
                         <div className="flex items-center gap-3">
-                          {item.free ? (
-                            <Play className="h-4 w-4 text-green-600" />
-                          ) : (
-                            <Lock className="h-4 w-4 text-gray-400" />
-                          )}
+                          <Lock className="h-4 w-4 text-gray-400" />
                           <span className="text-gray-700">{item.name}</span>
                         </div>
-                        {item.free && (
-                          <Badge variant="outline" className="text-green-600 border-green-300">
-                            Free Preview
-                          </Badge>
-                        )}
+                        <Badge variant="outline" className="text-gray-500 border-gray-300">
+                          Locked
+                        </Badge>
                       </div>
                     ))}
                   </div>
