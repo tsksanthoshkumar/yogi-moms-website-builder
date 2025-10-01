@@ -1,12 +1,9 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { useNavigate } from 'react-router-dom';
 
 const FloatingJoinButton = () => {
-  const navigate = useNavigate();
-  
   const handleJoinNow = () => {
-    navigate('/course');
+    window.location.href = '/';
   };
 
   return (
