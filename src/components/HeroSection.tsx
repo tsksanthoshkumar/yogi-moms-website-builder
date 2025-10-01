@@ -102,13 +102,6 @@ const HeroSection = ({
                 </Button>
               </div>
               
-              {/* Urgency */}
-              <div className="flex items-center justify-center lg:justify-start text-sm">
-                <div className="flex items-center text-primary">
-                  <span className="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse"></span>
-                  <span className="font-medium">Only 18 spots left (any trimester can join)</span>
-                </div>
-              </div>
             </div>
 
             {/* Enhanced Stats */}
