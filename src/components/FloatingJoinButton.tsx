@@ -17,7 +17,6 @@ const FloatingJoinButton = () => {
       >
         <div className="flex items-center gap-2">
           <div className="w-4 h-4 bg-blue-500 rounded-full animate-pulse"></div>
-          <span className="text-sm font-bold">18 spots left</span>
         </div>
         <span className="text-xl font-bold">Join Now</span>
       </Button>
