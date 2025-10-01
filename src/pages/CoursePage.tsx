@@ -98,7 +98,7 @@ const CoursePage = () => {
       ]
     },
     {
-      title: "Diet plans,Husband's Guide,Journal and Pregnancy guide & many more,,",
+      title: "Diet plans,Husband's Guide,Journal and Pregnancy guide & many more.",
       items: [
         { name: "Complete Pregnancy Journal", free: false },
         { name: "Trimester-wise Diet Plans", free: false },
