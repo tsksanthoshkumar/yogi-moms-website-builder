@@ -28,7 +28,7 @@ const HeroSection = ({
             </div>
             
             <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-foreground leading-tight">
-              For You, For Baby{' '}
+              All-in-One Pregnancy Care Package{' '}
               <span className="text-primary">
                 Make your
                 pregnancy easier
