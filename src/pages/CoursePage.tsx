@@ -4,8 +4,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ChevronLeft, Play, Lock, CheckCircle } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import heroYoga from "@/assets/hero-yoga-new.webp";
+import WhatsAppFloatButton from "@/components/WhatsAppFloatButton";
 
 const CoursePage = () => {
   const navigate = useNavigate();
@@ -193,7 +194,18 @@ const CoursePage = () => {
 
             <Button 
               className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white shadow-lg"
-              onClick={() => window.open('https://rzp.io/rzp/prenatal-mom', '_blank')}
+              onClick={() => {
+                // Track Facebook Pixel purchase event
+                if (typeof window !== 'undefined' && window.fbq) {
+                  window.fbq('track', 'InitiateCheckout', {
+                    value: 499,
+                    currency: 'INR',
+                    content_type: 'product',
+                    content_ids: ['prenatal-yoga-course']
+                  });
+                }
+                window.open('https://rzp.io/rzp/prenatal-mom', '_blank');
+              }}
             >
               Buy Now
             </Button>
@@ -224,10 +236,40 @@ const CoursePage = () => {
               <Button 
                 size="lg"
                 className="w-full md:w-auto bg-gradient-to-r from-blue-500 to-pink-500 hover:from-blue-600 hover:to-pink-600 text-white shadow-xl text-lg py-6"
-                onClick={() => window.open('https://rzp.io/rzp/prenatal-mom', '_blank')}
+                onClick={() => {
+                  // Track Facebook Pixel purchase event
+                  if (typeof window !== 'undefined' && window.fbq) {
+                    window.fbq('track', 'InitiateCheckout', {
+                      value: 499,
+                      currency: 'INR',
+                      content_type: 'product',
+                      content_ids: ['prenatal-yoga-course']
+                    });
+                  }
+                  window.open('https://rzp.io/rzp/prenatal-mom', '_blank');
+                }}
               >
                 Buy Now - Start Your Journey
               </Button>
+              
+              {/* Social proof section */}
+              <div className="mt-6 flex items-center gap-3 bg-pink-50 rounded-full px-6 py-3 border border-pink-200">
+                <div className="flex -space-x-3">
+                  <div className="w-10 h-10 bg-gradient-to-br from-pink-300 to-purple-300 rounded-full border-2 border-white flex items-center justify-center">
+                    <span className="text-white text-xs">👩</span>
+                  </div>
+                  <div className="w-10 h-10 bg-gradient-to-br from-purple-300 to-pink-300 rounded-full border-2 border-white flex items-center justify-center">
+                    <span className="text-white text-xs">👩</span>
+                  </div>
+                  <div className="w-10 h-10 bg-gradient-to-br from-pink-400 to-purple-400 rounded-full border-2 border-white flex items-center justify-center">
+                    <span className="text-white text-xs">👩</span>
+                  </div>
+                </div>
+                <div className="text-sm">
+                  <span className="font-bold text-pink-700">279+ mothers</span>
+                  <span className="text-gray-600"> joined this week</span>
+                </div>
+              </div>
             </div>
 
             <div className="relative">
@@ -363,10 +405,28 @@ const CoursePage = () => {
                 +91 7013805271
               </a>
             </div>
+            
+            <div className="flex justify-center gap-6 text-sm text-gray-600">
+              <Link to="/terms-of-service" className="hover:text-pink-600 underline">
+                Terms & Conditions
+              </Link>
+              <span>|</span>
+              <a href="#" className="hover:text-pink-600 underline">
+                Privacy Policy
+              </a>
+              <span>|</span>
+              <a href="#" className="hover:text-pink-600 underline">
+                Refund Policy
+              </a>
+            </div>
+            
             <p className="text-gray-600">© 2025 PrenatalMom's. All rights reserved.</p>
           </div>
         </div>
       </footer>
+      
+      {/* WhatsApp Floating Button */}
+      <WhatsAppFloatButton />
     </div>
   );
 };
