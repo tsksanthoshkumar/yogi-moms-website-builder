@@ -74,7 +74,7 @@ const Navigation = ({ onLogin, onSignup }: NavigationProps) => {
             <Button variant="outline" onClick={() => window.open('https://rzp.io/rzp/prenatal-mom', '_blank')}>
               Login
             </Button>
-            <Button variant="default" onClick={() => handleNavigation('/course')} className="font-bold">
+            <Button variant="default" onClick={() => handleNavigation('/')} className="font-bold">
               Join Now
             </Button>
           </div>
@@ -116,7 +116,7 @@ const Navigation = ({ onLogin, onSignup }: NavigationProps) => {
                 <Button variant="outline" onClick={() => window.open('https://superprofile.bio/course/prenatalmoms', '_blank')} className="flex-1">
                   Login
                 </Button>
-                <Button variant="default" onClick={() => handleNavigation('/course')} className="flex-1 font-bold">
+                <Button variant="default" onClick={() => handleNavigation('/')} className="flex-1 font-bold">
                   Join Now
                 </Button>
               </div>
