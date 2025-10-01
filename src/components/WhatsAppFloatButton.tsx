@@ -4,7 +4,7 @@ import { MessageCircle } from 'lucide-react';
 const WhatsAppFloatButton = () => {
   const handleWhatsAppClick = () => {
     const message = "Hi! I'm interested in the prenatal yoga course.";
-    const whatsappUrl = `https://wa.me/917013805271?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/+917013805271?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 

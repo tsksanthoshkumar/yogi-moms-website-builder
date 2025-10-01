@@ -2,7 +2,7 @@ import React from 'react';
 
 const WhatsAppFloat = () => {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/917013805271', '_blank');
+    window.open('https://wa.me/+917013805271', '_blank');
   };
 
   return (
