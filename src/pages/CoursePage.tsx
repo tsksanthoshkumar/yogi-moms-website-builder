@@ -167,7 +167,7 @@ const CoursePage = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                onClick={() => navigate('/')}
+                onClick={() => window.location.href = '/'}
                 className="text-pink-600 hover:bg-pink-100"
               >
                 <ChevronLeft className="h-5 w-5" />
