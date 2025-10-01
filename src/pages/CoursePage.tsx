@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ChevronLeft, Play, Lock, CheckCircle } from "lucide-react";
+import { ChevronLeft, Play, Lock, CircleCheck as CheckCircle } from "lucide-react";
 import { useNavigate, Link } from "react-router-dom";
 import heroYoga from "@/assets/hero-yoga-new.webp";
 import WhatsAppFloatButton from "@/components/WhatsAppFloatButton";
