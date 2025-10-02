@@ -123,19 +123,19 @@ const SlideToPayButton: React.FC<SlideToPayButtonProps> = ({ onPayment, classNam
   return (
     <div className={`w-full max-w-md mx-auto ${className}`}>
       {/* Header section similar to Google Pay */}
-      <div className="flex items-center justify-between mb-4 p-4 bg-white rounded-lg border border-gray-200">
+      <div className="flex items-center justify-between mb-3 md:mb-4 p-3 md:p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
         <div className="flex items-center gap-3">
           <img 
             src="/lovable-uploads/86701dd5-d52f-4fed-9baa-a7fea1be56c1.png" 
             alt="PrenatalYoga Logo" 
-            className="w-10 h-10 rounded-lg"
+            className="w-8 h-8 md:w-10 md:h-10 rounded-lg"
           />
           <div>
-            <div className="text-gray-600 text-sm">Buy Now</div>
-            <div className="font-semibold text-gray-900">PrenatalYoga Course</div>
+            <div className="text-gray-600 text-xs md:text-sm">Buy Now</div>
+            <div className="font-semibold text-gray-900 text-sm md:text-base">PrenatalYoga Course</div>
           </div>
         </div>
-        <button className="text-blue-500 font-medium text-sm hover:text-blue-600 transition-colors">
+        <button className="text-blue-500 font-medium text-xs md:text-sm hover:text-blue-600 transition-colors">
           Change →
         </button>
       </div>
@@ -143,12 +143,12 @@ const SlideToPayButton: React.FC<SlideToPayButtonProps> = ({ onPayment, classNam
       {/* Slide to Pay Button */}
       <div 
         ref={buttonRef}
-        className="relative w-full h-16 bg-blue-500 rounded-full overflow-hidden cursor-pointer select-none shadow-lg"
+        className="relative w-full h-14 md:h-16 bg-blue-500 rounded-full overflow-hidden cursor-pointer select-none shadow-lg touch-manipulation"
         style={{ background: 'linear-gradient(135deg, #4285f4 0%, #1a73e8 100%)' }}
       >
         {/* Background text */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-white font-semibold text-lg tracking-wide">
+          <span className="text-white font-semibold text-base md:text-lg tracking-wide">
             Slide to Pay | ₹499
           </span>
         </div>
@@ -156,7 +156,7 @@ const SlideToPayButton: React.FC<SlideToPayButtonProps> = ({ onPayment, classNam
         {/* Sliding button */}
         <div
           ref={sliderRef}
-          className="absolute left-1 top-1 w-14 h-14 bg-white rounded-full flex items-center justify-center cursor-grab active:cursor-grabbing shadow-lg transition-transform duration-200 ease-out"
+          className="absolute left-1 top-1 w-12 h-12 md:w-14 md:h-14 bg-white rounded-full flex items-center justify-center cursor-grab active:cursor-grabbing shadow-lg transition-transform duration-200 ease-out touch-manipulation"
           style={{ 
             transform: `translateX(${slidePosition}px)`,
             transition: isDragging ? 'none' : 'transform 0.3s ease-out'
@@ -167,11 +167,11 @@ const SlideToPayButton: React.FC<SlideToPayButtonProps> = ({ onPayment, classNam
           {/* Arrow icon */}
           <div className="flex items-center justify-center">
             <svg 
-              width="24" 
-              height="24" 
+              width="20" 
+              height="20" 
               viewBox="0 0 24 24" 
               fill="none" 
-              className="text-blue-500"
+              className="text-blue-500 md:w-6 md:h-6"
             >
               <path 
                 d="M8.5 5L15.5 12L8.5 19" 
@@ -195,7 +195,7 @@ const SlideToPayButton: React.FC<SlideToPayButtonProps> = ({ onPayment, classNam
       </div>
 
       {/* Helper text */}
-      <div className="text-center mt-3 text-sm text-gray-500">
+      <div className="text-center mt-2 md:mt-3 text-xs md:text-sm text-gray-500">
         Slide the button to complete your purchase
       </div>
     </div>
