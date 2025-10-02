@@ -7,6 +7,7 @@ import { ChevronLeft, Play, Lock, CircleCheck as CheckCircle } from "lucide-reac
 import { useNavigate, Link } from "react-router-dom";
 import heroYoga from "@/assets/hero-yoga-new.webp";
 import WhatsAppFloatButton from "@/components/WhatsAppFloatButton";
+import Footer from "@/components/Footer";
 
 // Testimonial images
 import testimonial1 from "@/assets/testimonial-1.jpg";
@@ -275,30 +276,30 @@ const CoursePage = () => {
               {/* Social proof section */}
               <div className="mt-6 flex items-center gap-3 bg-pink-50 rounded-full px-6 py-3 border border-pink-200">
                 <div className="flex -space-x-3">
-                  <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
+                  <div className="w-8 sm:w-10 h-8 sm:h-10 rounded-full border-2 border-white overflow-hidden">
                     <img 
-                      src="/src/assets/istockphoto-1179993020-612x612.jpg" 
+                      src={testimonial1}
                       alt="Happy pregnant mother" 
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
+                  <div className="w-8 sm:w-10 h-8 sm:h-10 rounded-full border-2 border-white overflow-hidden">
                     <img 
-                      src="/src/assets/istockphoto-1193530833-612x612.jpg" 
+                      src={testimonial2}
                       alt="Happy pregnant mother" 
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
+                  <div className="w-8 sm:w-10 h-8 sm:h-10 rounded-full border-2 border-white overflow-hidden">
                     <img 
-                      src="/src/assets/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAxL3Jhd3BpeGVsX29mZmljZV80NV9hX3ByZWduYW50X2luZGlhbl93b21hbl9zbWlsaW5nX2FybXNfY3Jvc3NlZF9jYjYwNTRlNC04OTgwLTRkNzItYmEyYy0zOTYxNGRhNzMwYTMucG5n.webp" 
+                      src={testimonial3}
                       alt="Happy pregnant mother" 
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
+                  <div className="w-8 sm:w-10 h-8 sm:h-10 rounded-full border-2 border-white overflow-hidden">
                     <img 
-                      src="/src/assets/portrait-beautiful-pregnant-woman.jpg" 
+                      src={testimonial4}
                       alt="Happy pregnant mother" 
                       className="w-full h-full object-cover"
                     />
@@ -454,21 +455,6 @@ const CoursePage = () => {
               </a>
             </div>
             
-            <div className="flex justify-center gap-6 text-sm text-gray-600">
-              <Link to="/terms-of-service" className="hover:text-pink-600 underline">
-                Terms & Conditions
-              </Link>
-              <span>|</span>
-              <a href="#" className="hover:text-pink-600 underline">
-                Privacy Policy
-              </a>
-              <span>|</span>
-              <a href="#" className="hover:text-pink-600 underline">
-                Refund Policy
-              </a>
-            </div>
-            
-            <p className="text-gray-600">© 2025 PrenatalMom's. All rights reserved.</p>
           </div>
         </div>
       </footer>

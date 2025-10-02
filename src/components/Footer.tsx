@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PolicyModal from './PolicyModal';
 
 const Footer = () => {
+  const [isPolicyModalOpen, setIsPolicyModalOpen] = useState(false);
+  const [policyType, setPolicyType] = useState<'privacy' | 'refund'>('privacy');
   return (
     <footer className="bg-foreground text-background py-12">
       <div className="container mx-auto px-4">
@@ -62,20 +65,37 @@ const Footer = () => {
             <p className="text-background/60 text-sm">
               © 2024 PrenatalYoga. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="/terms-of-service#privacy-policy" className="text-background/60 hover:text-background text-sm transition-colors">
+            <div className="flex flex-wrap justify-center md:justify-start space-x-4 md:space-x-6 mt-4 md:mt-0">
+              <button 
+                onClick={() => {
+                  setPolicyType('privacy');
+                  setIsPolicyModalOpen(true);
+                }}
+                className="text-background/60 hover:text-background text-sm transition-colors"
+              >
                 Privacy Policy
-              </a>
+              </button>
               <a href="/terms-of-service" className="text-background/60 hover:text-background text-sm transition-colors">
                 Terms of Service
               </a>
-              <a href="/terms-of-service#refund-policy" className="text-background/60 hover:text-background text-sm transition-colors">
+              <button 
+                onClick={() => {
+                  setPolicyType('refund');
+                  setIsPolicyModalOpen(true);
+                }}
+                className="text-background/60 hover:text-background text-sm transition-colors"
+              >
                 Refund Policy
-              </a>
+              </button>
             </div>
           </div>
         </div>
       </div>
+      <PolicyModal 
+        isOpen={isPolicyModalOpen}
+        onClose={() => setIsPolicyModalOpen(false)}
+        type={policyType}
+      />
     </footer>
   );
 };

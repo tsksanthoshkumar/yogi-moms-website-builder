@@ -66,17 +66,17 @@ const TestimonialsSection = () => {
             }}
             className="w-full"
           >
-            <CarouselContent className="-ml-4">
+            <CarouselContent className="-ml-2 sm:-ml-4">
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="pl-2 sm:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                   <Card className={`border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${testimonial.bgColor} h-full`}>
-                    <CardContent className="p-6 flex flex-col h-full">
+                    <CardContent className="p-4 sm:p-6 flex flex-col h-full">
                       {/* Profile Section */}
                       <div className="flex items-center mb-4">
                         <img 
                           src={testimonial.image} 
                           alt={testimonial.name}
-                          className="w-24 h-24 rounded-full object-cover border-4 border-white shadow-md mr-4"
+                          className="w-16 sm:w-20 lg:w-24 h-16 sm:h-20 lg:h-24 rounded-full object-cover border-4 border-white shadow-md mr-3 sm:mr-4"
                         />
                         <div>
                           <h4 className="font-bold text-lg text-foreground">
