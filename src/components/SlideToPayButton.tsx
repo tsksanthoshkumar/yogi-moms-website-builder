@@ -1,0 +1,205 @@
+import React, { useState, useRef, useEffect } from 'react';
+
+interface SlideToPayButtonProps {
+  onPayment?: () => void;
+  className?: string;
+}
+
+const SlideToPayButton: React.FC<SlideToPayButtonProps> = ({ onPayment, className = "" }) => {
+  const [isSliding, setIsSliding] = useState(false);
+  const [slidePosition, setSlidePosition] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const buttonRef = useRef<HTMLDivElement>(null);
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  const handlePayment = () => {
+    // Track Facebook Pixel purchase event
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'InitiateCheckout', {
+        value: 499,
+        currency: 'INR',
+        content_type: 'product',
+        content_ids: ['prenatal-yoga-course']
+      });
+    }
+    
+    // Redirect to Razorpay
+    window.open('https://rzp.io/rzp/prenatal-mom', '_blank');
+    
+    if (onPayment) {
+      onPayment();
+    }
+  };
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    setIsSliding(true);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setIsDragging(true);
+    setIsSliding(true);
+  };
+
+  const handleMouseMove = (e: MouseEvent) => {
+    if (!isDragging || !buttonRef.current || !sliderRef.current) return;
+
+    const buttonRect = buttonRef.current.getBoundingClientRect();
+    const sliderWidth = sliderRef.current.offsetWidth;
+    const maxSlide = buttonRect.width - sliderWidth;
+    
+    let newPosition = e.clientX - buttonRect.left - sliderWidth / 2;
+    newPosition = Math.max(0, Math.min(newPosition, maxSlide));
+    
+    setSlidePosition(newPosition);
+
+    // If slid more than 80% of the way, trigger payment
+    if (newPosition > maxSlide * 0.8) {
+      setIsDragging(false);
+      setIsSliding(false);
+      handlePayment();
+      // Reset position after a short delay
+      setTimeout(() => setSlidePosition(0), 300);
+    }
+  };
+
+  const handleTouchMove = (e: TouchEvent) => {
+    if (!isDragging || !buttonRef.current || !sliderRef.current) return;
+
+    const touch = e.touches[0];
+    const buttonRect = buttonRef.current.getBoundingClientRect();
+    const sliderWidth = sliderRef.current.offsetWidth;
+    const maxSlide = buttonRect.width - sliderWidth;
+    
+    let newPosition = touch.clientX - buttonRect.left - sliderWidth / 2;
+    newPosition = Math.max(0, Math.min(newPosition, maxSlide));
+    
+    setSlidePosition(newPosition);
+
+    // If slid more than 80% of the way, trigger payment
+    if (newPosition > maxSlide * 0.8) {
+      setIsDragging(false);
+      setIsSliding(false);
+      handlePayment();
+      // Reset position after a short delay
+      setTimeout(() => setSlidePosition(0), 300);
+    }
+  };
+
+  const handleMouseUp = () => {
+    if (isDragging) {
+      setIsDragging(false);
+      setIsSliding(false);
+      // Animate back to start if not completed
+      setSlidePosition(0);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (isDragging) {
+      setIsDragging(false);
+      setIsSliding(false);
+      // Animate back to start if not completed
+      setSlidePosition(0);
+    }
+  };
+
+  useEffect(() => {
+    if (isDragging) {
+      document.addEventListener('mousemove', handleMouseMove);
+      document.addEventListener('mouseup', handleMouseUp);
+      document.addEventListener('touchmove', handleTouchMove);
+      document.addEventListener('touchend', handleTouchEnd);
+    }
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+      document.removeEventListener('touchmove', handleTouchMove);
+      document.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, [isDragging]);
+
+  return (
+    <div className={`w-full max-w-md mx-auto ${className}`}>
+      {/* Header section similar to Google Pay */}
+      <div className="flex items-center justify-between mb-4 p-4 bg-white rounded-lg border border-gray-200">
+        <div className="flex items-center gap-3">
+          <img 
+            src="/lovable-uploads/86701dd5-d52f-4fed-9baa-a7fea1be56c1.png" 
+            alt="PrenatalYoga Logo" 
+            className="w-10 h-10 rounded-lg"
+          />
+          <div>
+            <div className="text-gray-600 text-sm">Buy Now</div>
+            <div className="font-semibold text-gray-900">PrenatalYoga Course</div>
+          </div>
+        </div>
+        <button className="text-blue-500 font-medium text-sm hover:text-blue-600 transition-colors">
+          Change →
+        </button>
+      </div>
+
+      {/* Slide to Pay Button */}
+      <div 
+        ref={buttonRef}
+        className="relative w-full h-16 bg-blue-500 rounded-full overflow-hidden cursor-pointer select-none shadow-lg"
+        style={{ background: 'linear-gradient(135deg, #4285f4 0%, #1a73e8 100%)' }}
+      >
+        {/* Background text */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <span className="text-white font-semibold text-lg tracking-wide">
+            Slide to Pay | ₹499
+          </span>
+        </div>
+
+        {/* Sliding button */}
+        <div
+          ref={sliderRef}
+          className="absolute left-1 top-1 w-14 h-14 bg-white rounded-full flex items-center justify-center cursor-grab active:cursor-grabbing shadow-lg transition-transform duration-200 ease-out"
+          style={{ 
+            transform: `translateX(${slidePosition}px)`,
+            transition: isDragging ? 'none' : 'transform 0.3s ease-out'
+          }}
+          onMouseDown={handleMouseDown}
+          onTouchStart={handleTouchStart}
+        >
+          {/* Arrow icon */}
+          <div className="flex items-center justify-center">
+            <svg 
+              width="24" 
+              height="24" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              className="text-blue-500"
+            >
+              <path 
+                d="M8.5 5L15.5 12L8.5 19" 
+                stroke="currentColor" 
+                strokeWidth="2.5" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+
+        {/* Sliding overlay effect */}
+        <div 
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 transition-opacity duration-200"
+          style={{ 
+            opacity: isSliding ? 0.3 : 0,
+            transform: `translateX(${slidePosition - 50}px)`
+          }}
+        />
+      </div>
+
+      {/* Helper text */}
+      <div className="text-center mt-3 text-sm text-gray-500">
+        Slide the button to complete your purchase
+      </div>
+    </div>
+  );
+};
+
+export default SlideToPayButton;

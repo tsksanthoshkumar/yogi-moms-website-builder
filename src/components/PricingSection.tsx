@@ -1,4 +1,5 @@
 import React from 'react';
+import SlideToPayButton from './SlideToPayButton';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -92,6 +93,11 @@ const PricingSection = ({ onSignup }: PricingSectionProps) => {
               >
                 Join Now
               </Button>
+              
+              {/* Slide to Pay Button */}
+              <div className="mt-6">
+                <SlideToPayButton />
+              </div>
               
               {/* YouTube Video */}
               <div className="mt-6 rounded-lg overflow-hidden shadow-lg">
