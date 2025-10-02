@@ -7,10 +7,6 @@ import { ChevronLeft, Play, Lock, CircleCheck as CheckCircle } from "lucide-reac
 import { useNavigate, Link } from "react-router-dom";
 import heroYoga from "@/assets/hero-yoga-new.webp";
 import WhatsAppFloatButton from "@/components/WhatsAppFloatButton";
-import mother1 from "@/assets/istockphoto-1179993020-612x612.jpg";
-import mother2 from "@/assets/istockphoto-1193530833-612x612.jpg";
-import mother3 from "@/assets/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAxL3Jhd3BpeGVsX29mZmljZV80NV9hX3ByZWduYW50X2luZGlhbl93b21hbl9zbWlsaW5nX2FybXNfY3Jvc3NlZF9jYjYwNTRlNC04OTgwLTRkNzItYmEyYy0zOTYxNGRhNzMwYTMucG5n.webp";
-import mother4 from "@/assets/portrait-beautiful-pregnant-woman.jpg";
 
 const CoursePage = () => {
   const navigate = useNavigate();
@@ -103,7 +99,7 @@ const CoursePage = () => {
       ]
     },
     {
-      title: "Diet plans,Husband's Guide,Journal and Pregnancy guide & many more.",
+      title: "Resources, Videos and PDFs - Diet plans, Husband's Guide, Journal and Pregnancy guide & many more.",
       items: [
         { name: "Complete Pregnancy Journal", free: false },
         { name: "Trimester-wise Diet Plans", free: false },
@@ -261,28 +257,28 @@ const CoursePage = () => {
                 <div className="flex -space-x-3">
                   <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
                     <img 
-                      src={mother1} 
+                      src="/src/assets/istockphoto-1179993020-612x612.jpg" 
                       alt="Happy pregnant mother" 
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
                     <img 
-                      src={mother2} 
+                      src="/src/assets/istockphoto-1193530833-612x612.jpg" 
                       alt="Happy pregnant mother" 
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
                     <img 
-                      src={mother3} 
+                      src="/src/assets/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTAxL3Jhd3BpeGVsX29mZmljZV80NV9hX3ByZWduYW50X2luZGlhbl93b21hbl9zbWlsaW5nX2FybXNfY3Jvc3NlZF9jYjYwNTRlNC04OTgwLTRkNzItYmEyYy0zOTYxNGRhNzMwYTMucG5n.webp" 
                       alt="Happy pregnant mother" 
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
                     <img 
-                      src={mother4} 
+                      src="/src/assets/portrait-beautiful-pregnant-woman.jpg" 
                       alt="Happy pregnant mother" 
                       className="w-full h-full object-cover"
                     />
@@ -360,7 +356,7 @@ const CoursePage = () => {
                   <div className="flex items-center justify-between w-full">
                     <span className="font-semibold text-left">{section.title}</span>
                     <Badge variant="secondary" className="ml-2">
-                      {section.items.length} Videos
+                      {section.title.includes('Hindi') ? '40' : section.items.length} {section.title.includes('Resources') ? 'Resources' : 'Videos'}
                     </Badge>
                   </div>
                 </AccordionTrigger>
