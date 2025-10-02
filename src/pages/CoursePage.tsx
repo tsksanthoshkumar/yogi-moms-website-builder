@@ -8,6 +8,17 @@ import { useNavigate, Link } from "react-router-dom";
 import heroYoga from "@/assets/hero-yoga-new.webp";
 import WhatsAppFloatButton from "@/components/WhatsAppFloatButton";
 
+// Testimonial images
+import testimonial1 from "@/assets/testimonial-1.jpg";
+import testimonial2 from "@/assets/testimonial-2.jpg";
+import testimonial3 from "@/assets/testimonial-3.jpg";
+import testimonial4 from "@/assets/testimonial-4.png";
+import testimonial5 from "@/assets/testimonial-5.png";
+import testimonial6 from "@/assets/testimonial-6.png";
+import testimonial7 from "@/assets/testimonial-7.jpg";
+import testimonial8 from "@/assets/testimonial-8.jpg";
+import testimonial9 from "@/assets/testimonial-9.jpg";
+
 const CoursePage = () => {
   const navigate = useNavigate();
   const [expandedSection, setExpandedSection] = useState<string>("");
@@ -114,46 +125,55 @@ const CoursePage = () => {
     {
       name: "P. Rituu",
       rating: 5,
+      image: testimonial1,
       text: "This was my first pregnancy and I had no idea what to expect. The gentle stretches and meditation helped me connect with my baby every day. I felt so confident and prepared for labour because of these sessions."
     },
     {
       name: "Keerthi",
       rating: 4,
+      image: testimonial2,
       text: "I feel better, more confident. My husband planned small games for me by following the guide. Nice content, joined in 7th month, still worth the money."
     },
     {
       name: "Madhavi",
       rating: 5,
+      image: testimonial3,
       text: "Good course! I really liked the diet plans for every trimester."
     },
     {
       name: "Lalith P.",
       rating: 5,
+      image: testimonial4,
       text: "I would feel tired after walking just a little. Now, I can do my daily chores without panting. The exercises gave me a deep connection with my baby during meditation. Beautiful experience."
     },
     {
       name: "Anjali",
       rating: 5,
+      image: testimonial5,
       text: "I was scared of normal delivery but the breathing exercises gave me confidence. I delivered a healthy baby girl last month, and my recovery was much faster than I expected."
     },
     {
       name: "Archana",
       rating: 4,
+      image: testimonial6,
       text: "We played the 'name the baby' game – so many funny ideas came up!"
     },
     {
       name: "Harshitha",
       rating: 5,
+      image: testimonial7,
       text: "Today my baby kicked right when I started the breathing exercise. Noted it in my journal – such a nice feeling recording every step. Thank you so much for this!"
     },
     {
       name: "Parul Jain",
       rating: 5,
+      image: testimonial8,
       text: "Made me feel connected to my baby every single day. Very well-structured. Worth every rupee. I'd recommend this to every mom-to-be."
     },
     {
       name: "Bharathi",
       rating: 4,
+      image: testimonial9,
       text: "The content is good, it helps me move and stay active."
     }
   ];
@@ -392,12 +412,21 @@ const CoursePage = () => {
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="bg-white/80 backdrop-blur border-pink-100 hover:shadow-xl transition-all">
                 <CardContent className="p-6">
-                  <div className="flex items-center gap-1 mb-3">
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i} className={i < testimonial.rating ? "text-yellow-400" : "text-gray-300"}>
-                        ⭐
-                      </span>
-                    ))}
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border-2 border-pink-200">
+                      <img 
+                        src={testimonial.image} 
+                        alt={`${testimonial.name}'s photo`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="flex items-center gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <span key={i} className={i < testimonial.rating ? "text-yellow-400" : "text-gray-300"}>
+                          ⭐
+                        </span>
+                      ))}
+                    </div>
                   </div>
                   <p className="text-gray-600 italic mb-4">"{testimonial.text}"</p>
                   <div className="flex items-center gap-2">
