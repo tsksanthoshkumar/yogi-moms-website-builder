@@ -46,11 +46,20 @@ const PolicyModal: React.FC<PolicyModalProps> = ({ isOpen, onClose, type }) => {
       title: 'Refund Policy',
       sections: [
         {
-          heading: 'NO refunfund ',
+          heading: 'Thank you for shopping at prenatalmoms',
+          content: ''
         },
         {
-          heading: 'Contact Support',
-          content: 'For any questions about our refund policy, please contact us at prenatlyogaa@gmail.com or WhatsApp: +917013805271'
+          heading: 'Non-tangible irrevocable goods ("Digital products")',
+          content: 'We do not issue refunds for non-tangible irrevocable goods ("digital products") once the order is confirmed and the product is sent.'
+        },
+        {
+          heading: 'Contact us for assistance',
+          content: 'We recommend contacting us for assistance if you experience any issues receiving or downloading our products.'
+        },
+        {
+          heading: 'Contact Information',
+          content: 'If you have any questions about our Returns and Refunds Policy, please contact us at: prenatalyogaa@gmail.com'
         }
       ]
     },
