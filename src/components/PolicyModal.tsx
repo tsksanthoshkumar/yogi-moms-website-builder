@@ -48,10 +48,6 @@ const PolicyModal: React.FC<PolicyModalProps> = ({ isOpen, onClose, type }) => {
         {
           heading: 'NO refunfund ',
         },
-        all sales are final and no refunds will be issued.'
-        },
-
-  
         {
           heading: 'Contact Support',
           content: 'For any questions about our refund policy, please contact us at prenatlyogaa@gmail.com or WhatsApp: +917013805271'
