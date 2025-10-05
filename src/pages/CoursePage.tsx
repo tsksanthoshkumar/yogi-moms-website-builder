@@ -532,59 +532,6 @@ const CoursePage = () => {
         </div>
       </section>
 
-      {/* Important Links Section */}
-      <section className="py-12 md:py-16 bg-gradient-to-b from-pink-50 to-lavender-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-gray-700 mb-6 text-lg">
-              💝 We're committed to transparency and your trust 💝
-            </p>
-            
-            <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-              <button 
-                onClick={() => {
-                  setPolicyType('privacy');
-                  setIsPolicyModalOpen(true);
-                }}
-                className="px-6 py-3 bg-white text-pink-600 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all font-medium border-2 border-pink-200"
-              >
-                🔒 Privacy Policy
-              </button>
-              
-              <button 
-                onClick={() => {
-                  setPolicyType('terms');
-                  setIsPolicyModalOpen(true);
-                }}
-                className="px-6 py-3 bg-white text-pink-600 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all font-medium border-2 border-pink-200"
-              >
-                📋 Terms of Use
-              </button>
-              
-              <button 
-                onClick={() => {
-                  setPolicyType('contact');
-                  setIsPolicyModalOpen(true);
-                }}
-                className="px-6 py-3 bg-white text-pink-600 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all font-medium border-2 border-pink-200"
-              >
-                💬 Contact Us
-              </button>
-              
-              <button 
-                onClick={() => {
-                  setPolicyType('refund');
-                  setIsPolicyModalOpen(true);
-                }}
-                className="px-6 py-3 bg-white text-pink-600 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all font-medium border-2 border-pink-200"
-              >
-                ✨ Refund Policy
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="bg-gradient-to-r from-pink-100 to-purple-100 border-t border-pink-200">
         <div className="container mx-auto px-4 py-8">
