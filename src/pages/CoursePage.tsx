@@ -8,6 +8,7 @@ import { useNavigate, Link } from "react-router-dom";
 import heroYoga from "@/assets/hero-yoga-new.webp";
 import WhatsAppFloatButton from "@/components/WhatsAppFloatButton";
 import Footer from "@/components/Footer";
+import PolicyModal from "@/components/PolicyModal";
 
 // Testimonial images
 import testimonial1 from "@/assets/testimonial-1.jpg";
@@ -23,6 +24,8 @@ import testimonial9 from "@/assets/testimonial-9.jpg";
 const CoursePage = () => {
   const navigate = useNavigate();
   const [expandedSection, setExpandedSection] = useState<string>("");
+  const [isPolicyModalOpen, setIsPolicyModalOpen] = useState(false);
+  const [policyType, setPolicyType] = useState<'privacy' | 'refund' | 'terms' | 'contact'>('privacy');
 
   const courseContent = [
     {
@@ -529,44 +532,54 @@ const CoursePage = () => {
         </div>
       </section>
 
-      {/* Terms & Conditions Section */}
+      {/* Important Links Section */}
       <section className="py-12 md:py-16 bg-gradient-to-b from-pink-50 to-lavender-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
-            Terms & Conditions
-          </h2>
-          
-          <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-8 border border-pink-100">
-            <div className="space-y-4 text-gray-700">
-              <p className="flex items-start gap-3">
-                <span className="text-pink-500 text-xl">💝</span>
-                <span><strong>Lifetime Access:</strong> Once you purchase, the course is yours forever. Access all videos, PDFs, and resources anytime, from any device.</span>
-              </p>
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-gray-700 mb-6 text-lg">
+              💝 We're committed to transparency and your trust 💝
+            </p>
+            
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+              <button 
+                onClick={() => {
+                  setPolicyType('privacy');
+                  setIsPolicyModalOpen(true);
+                }}
+                className="px-6 py-3 bg-white text-pink-600 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all font-medium border-2 border-pink-200"
+              >
+                🔒 Privacy Policy
+              </button>
               
-              <p className="flex items-start gap-3">
-                <span className="text-pink-500 text-xl">🌸</span>
-                <span><strong>Safe & Gentle:</strong> All exercises are designed specifically for pregnancy and have been reviewed by certified prenatal yoga experts.</span>
-              </p>
+              <button 
+                onClick={() => {
+                  setPolicyType('terms');
+                  setIsPolicyModalOpen(true);
+                }}
+                className="px-6 py-3 bg-white text-pink-600 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all font-medium border-2 border-pink-200"
+              >
+                📋 Terms of Use
+              </button>
               
-              <p className="flex items-start gap-3">
-                <span className="text-pink-500 text-xl">🔒</span>
-                <span><strong>Secure Payment:</strong> Your payment information is completely safe and secure through our trusted payment gateway.</span>
-              </p>
+              <button 
+                onClick={() => {
+                  setPolicyType('contact');
+                  setIsPolicyModalOpen(true);
+                }}
+                className="px-6 py-3 bg-white text-pink-600 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all font-medium border-2 border-pink-200"
+              >
+                💬 Contact Us
+              </button>
               
-              <p className="flex items-start gap-3">
-                <span className="text-pink-500 text-xl">💬</span>
-                <span><strong>Support:</strong> Have questions? We're here to help! Reach out to us anytime at prenatalyogaa@gmail.com or WhatsApp us.</span>
-              </p>
-              
-              <p className="flex items-start gap-3">
-                <span className="text-pink-500 text-xl">🌿</span>
-                <span><strong>Medical Consultation:</strong> While our program is safe and gentle, we always recommend consulting with your doctor before starting any new exercise routine during pregnancy.</span>
-              </p>
-              
-              <p className="flex items-start gap-3">
-                <span className="text-pink-500 text-xl">✨</span>
-                <span><strong>Refund Policy:</strong> We offer a 7-day refund policy. If you're not satisfied within the first 7 days, we'll give you a full refund — no questions asked.</span>
-              </p>
+              <button 
+                onClick={() => {
+                  setPolicyType('refund');
+                  setIsPolicyModalOpen(true);
+                }}
+                className="px-6 py-3 bg-white text-pink-600 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all font-medium border-2 border-pink-200"
+              >
+                ✨ Refund Policy
+              </button>
             </div>
           </div>
         </div>
@@ -592,6 +605,13 @@ const CoursePage = () => {
       
       {/* WhatsApp Floating Button */}
       <WhatsAppFloatButton />
+
+      {/* Policy Modal */}
+      <PolicyModal 
+        isOpen={isPolicyModalOpen}
+        onClose={() => setIsPolicyModalOpen(false)}
+        type={policyType}
+      />
     </div>
   );
 };

@@ -12,7 +12,7 @@ import { ScrollArea } from './ui/scroll-area';
 interface PolicyModalProps {
   isOpen: boolean;
   onClose: () => void;
-  type: 'privacy' | 'refund';
+  type: 'privacy' | 'refund' | 'terms' | 'contact';
 }
 
 const PolicyModal: React.FC<PolicyModalProps> = ({ isOpen, onClose, type }) => {
@@ -64,6 +64,60 @@ const PolicyModal: React.FC<PolicyModalProps> = ({ isOpen, onClose, type }) => {
         {
           heading: 'Contact Support',
           content: 'For any questions about our refund policy, please contact us at prenatlyogaa@gmail.com or WhatsApp: +917013805271'
+        }
+      ]
+    },
+    terms: {
+      title: 'Terms of Use',
+      sections: [
+        {
+          heading: '💝 Lifetime Access',
+          content: 'Once you purchase, the course is yours forever. Access all videos, PDFs, and resources anytime, from any device.'
+        },
+        {
+          heading: '🌸 Safe & Gentle Content',
+          content: 'All exercises are designed specifically for pregnancy and have been reviewed by certified prenatal yoga experts. However, we always recommend consulting with your doctor before starting any new exercise routine during pregnancy.'
+        },
+        {
+          heading: '🔒 Secure Payment',
+          content: 'Your payment information is completely safe and secure through our trusted payment gateway.'
+        },
+        {
+          heading: '📚 Content Usage',
+          content: 'The course content is for personal use only. Sharing, copying, or distributing the content is strictly prohibited.'
+        },
+        {
+          heading: '⚖️ Limitation of Liability',
+          content: 'While we strive to provide safe and effective guidance, PrenatalYoga is not a substitute for medical advice. Always consult your healthcare provider before beginning any exercise program during pregnancy.'
+        },
+        {
+          heading: '✨ Refund Policy',
+          content: 'We offer a 7-day refund policy. If you\'re not satisfied within the first 7 days, we\'ll give you a full refund — no questions asked.'
+        }
+      ]
+    },
+    contact: {
+      title: 'Contact Us',
+      sections: [
+        {
+          heading: '💝 We\'re Here for You',
+          content: 'We\'re here to support you every step of your pregnancy journey!'
+        },
+        {
+          heading: '📧 Email Us',
+          content: 'prenatalyogaa@gmail.com - We typically respond within 24 hours'
+        },
+        {
+          heading: '💬 WhatsApp Support',
+          content: '+91 7013805271 - Chat with us for quick assistance'
+        },
+        {
+          heading: '🕒 Support Hours',
+          content: 'Monday - Saturday: 9:00 AM - 6:00 PM IST. We\'re closed on Sundays and public holidays.'
+        },
+        {
+          heading: '❓ Common Questions',
+          content: 'Before reaching out, you might find your answer in our FAQs section on the main page!'
         }
       ]
     }
