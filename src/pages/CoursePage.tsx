@@ -320,7 +320,7 @@ const CoursePage = () => {
                   💝 <span className="font-semibold text-pink-700">Join at Any Time, Any Trimester</span> 💝
                   <br />
                   <span className="text-sm mt-2 block">
-                    Whether you're in your 1st month or 9th month, every session is lovingly designed to match your stage of pregnancy. You're always welcome here, mama! 🤰✨
+                   No matter if you're in your 1st or 9th month, each session fits your stage perfectly. You’re always welcome, mama! 🤰💖
                   </span>
                 </p>
               </div>
