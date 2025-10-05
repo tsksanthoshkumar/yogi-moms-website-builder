@@ -310,6 +310,17 @@ const CoursePage = () => {
                   <span className="text-gray-600"> joined this week</span>
                 </div>
               </div>
+
+              {/* Join Anytime Section */}
+              <div className="mt-6 p-6 bg-gradient-to-br from-lavender-100 to-pink-100 rounded-2xl border border-pink-200 shadow-sm">
+                <p className="text-center text-gray-700 leading-relaxed">
+                  💝 <span className="font-semibold text-pink-700">Join at Any Time, Any Trimester</span> 💝
+                  <br />
+                  <span className="text-sm mt-2 block">
+                    Whether you're in your 1st month or 9th month, every session is lovingly designed to match your stage of pregnancy. You're always welcome here, mama! 🤰✨
+                  </span>
+                </p>
+              </div>
             </div>
 
             <div className="relative">
@@ -437,6 +448,126 @@ const CoursePage = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQs Section */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
+            Frequently Asked Questions
+          </h2>
+          
+          <div className="max-w-3xl mx-auto space-y-4">
+            <Card className="border-pink-100 hover:shadow-lg transition-all">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-lg text-pink-700 mb-3">
+                  1️⃣ Is this for any month? I'm in my 7th month — can I join?
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Yes, absolutely! 💖 You can join at any month or trimester — whether it's your 1st, 5th, or even 9th month. Each session is designed to gently match your stage of pregnancy, so you'll always feel safe, supported, and cared for. 🤰✨
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-pink-100 hover:shadow-lg transition-all">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-lg text-pink-700 mb-3">
+                  2️⃣ Is this exercise plan for all 9 months?
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Yes! 🌸 This is a complete 9-month pregnancy wellness plan, created to guide you every step of the way — from your early pregnancy to your final trimester. You'll find daily activities, simple stretches, relaxation routines, and bonding moments that grow with you and your baby. 💞
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-pink-100 hover:shadow-lg transition-all">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-lg text-pink-700 mb-3">
+                  3️⃣ What if I join late — will I still get the full experience?
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Of course! 🌷 Even if you join in your 6th, 7th, or 8th month, you'll still get access to all content from earlier months, so you can explore, learn, and enjoy at your own pace. 🕊️
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-pink-100 hover:shadow-lg transition-all">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-lg text-pink-700 mb-3">
+                  4️⃣ Do I need any special equipment?
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Not at all! 🏡 Most exercises can be done with just a yoga mat and comfortable clothing. For some sessions, you may use a pillow, cushion, or resistance band — but we'll guide you through simple alternatives if you don't have them. Everything is designed to be easy and accessible from home.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-pink-100 hover:shadow-lg transition-all">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-lg text-pink-700 mb-3">
+                  5️⃣ How long are the sessions?
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Each session is between 10-30 minutes, designed to fit into your daily routine without overwhelming you. You can do them in the morning, evening, or whenever you feel comfortable — it's all about what works best for you! ⏰💕
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-pink-100 hover:shadow-lg transition-all">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-lg text-pink-700 mb-3">
+                  6️⃣ Is it safe for first-time mothers?
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Absolutely! 🤗 This program is specially designed for all mothers — whether it's your first pregnancy or third. Every exercise is gentle, pregnancy-safe, and created with expert guidance to ensure you and your baby are well taken care of.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Terms & Conditions Section */}
+      <section className="py-12 md:py-16 bg-gradient-to-b from-pink-50 to-lavender-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
+            Terms & Conditions
+          </h2>
+          
+          <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-8 border border-pink-100">
+            <div className="space-y-4 text-gray-700">
+              <p className="flex items-start gap-3">
+                <span className="text-pink-500 text-xl">💝</span>
+                <span><strong>Lifetime Access:</strong> Once you purchase, the course is yours forever. Access all videos, PDFs, and resources anytime, from any device.</span>
+              </p>
+              
+              <p className="flex items-start gap-3">
+                <span className="text-pink-500 text-xl">🌸</span>
+                <span><strong>Safe & Gentle:</strong> All exercises are designed specifically for pregnancy and have been reviewed by certified prenatal yoga experts.</span>
+              </p>
+              
+              <p className="flex items-start gap-3">
+                <span className="text-pink-500 text-xl">🔒</span>
+                <span><strong>Secure Payment:</strong> Your payment information is completely safe and secure through our trusted payment gateway.</span>
+              </p>
+              
+              <p className="flex items-start gap-3">
+                <span className="text-pink-500 text-xl">💬</span>
+                <span><strong>Support:</strong> Have questions? We're here to help! Reach out to us anytime at prenatalyogaa@gmail.com or WhatsApp us.</span>
+              </p>
+              
+              <p className="flex items-start gap-3">
+                <span className="text-pink-500 text-xl">🌿</span>
+                <span><strong>Medical Consultation:</strong> While our program is safe and gentle, we always recommend consulting with your doctor before starting any new exercise routine during pregnancy.</span>
+              </p>
+              
+              <p className="flex items-start gap-3">
+                <span className="text-pink-500 text-xl">✨</span>
+                <span><strong>Refund Policy:</strong> We offer a 7-day refund policy. If you're not satisfied within the first 7 days, we'll give you a full refund — no questions asked.</span>
+              </p>
+            </div>
           </div>
         </div>
       </section>
