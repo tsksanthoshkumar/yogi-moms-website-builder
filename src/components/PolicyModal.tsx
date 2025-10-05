@@ -71,28 +71,44 @@ const PolicyModal: React.FC<PolicyModalProps> = ({ isOpen, onClose, type }) => {
       title: 'Terms of Use',
       sections: [
         {
-          heading: '💝 Lifetime Access',
-          content: 'Once you purchase, the course is yours forever. Access all videos, PDFs, and resources anytime, from any device.'
+          heading: 'Welcome to PrenatalMoms! 💖',
+          content: 'These Terms of Use explain how you can use our website, app, and all services (together called the "Platform"). Please read this carefully — by using PrenatalMoms, you agree to follow these terms.'
         },
         {
-          heading: '🌸 Safe & Gentle Content',
-          content: 'All exercises are designed specifically for pregnancy and have been reviewed by certified prenatal yoga experts. However, we always recommend consulting with your doctor before starting any new exercise routine during pregnancy.'
+          heading: '1. Who Can Use PrenatalMoms',
+          content: 'You must be at least 18 years old (or have your parent/guardian\'s permission if between 13–18) to join our programs or use the Platform.'
         },
         {
-          heading: '🔒 Secure Payment',
-          content: 'Your payment information is completely safe and secure through our trusted payment gateway.'
+          heading: '2. What You Get Access To',
+          content: 'When you sign up and pay for our classes or materials, you get personal, non-commercial access to our content. This includes videos, guides, and resources designed with love for expecting mothers. Please don\'t copy, share, or resell any content.'
         },
         {
-          heading: '📚 Content Usage',
-          content: 'The course content is for personal use only. Sharing, copying, or distributing the content is strictly prohibited.'
+          heading: '3. Respectful Community',
+          content: 'PrenatalMoms is a safe, caring space for mothers and families. Be kind, avoid offensive or harmful language, and respect everyone\'s privacy. Any misuse may result in suspension or removal from the Platform.'
         },
         {
-          heading: '⚖️ Limitation of Liability',
-          content: 'While we strive to provide safe and effective guidance, PrenatalYoga is not a substitute for medical advice. Always consult your healthcare provider before beginning any exercise program during pregnancy.'
+          heading: '4. Payments & Refunds',
+          content: 'All payments are processed securely through trusted partners. Once you join a program, fees are non-refundable, unless stated otherwise in our Refund Policy.'
         },
         {
-          heading: '✨ Refund Policy',
-          content: 'We offer a 7-day refund policy. If you\'re not satisfied within the first 7 days, we\'ll give you a full refund — no questions asked.'
+          heading: '5. Privacy',
+          content: 'We respect your privacy. Please check our Privacy Policy to know how we collect and use your data safely.'
+        },
+        {
+          heading: '6. Our Content',
+          content: 'All videos, guides, and materials belong to PrenatalMoms. You can use them for personal learning only. Copying or reusing them elsewhere isn\'t allowed.'
+        },
+        {
+          heading: '7. No Guarantees',
+          content: 'Our programs are meant for wellness, education, and emotional support. We don\'t provide medical advice or guarantees of specific results. Always consult your doctor for medical concerns.'
+        },
+        {
+          heading: '8. Changes to Terms',
+          content: 'We may update these Terms sometimes to improve our services. Please check this page for the latest version.'
+        },
+        {
+          heading: '9. Contact Us',
+          content: 'Got questions? Reach out at 📩 support@prenatalmoms.com — we\'d love to help you.'
         }
       ]
     },

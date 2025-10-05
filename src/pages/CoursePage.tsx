@@ -546,6 +546,48 @@ const CoursePage = () => {
               </a>
             </div>
             
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
+              <button 
+                onClick={() => {
+                  setPolicyType('terms');
+                  setIsPolicyModalOpen(true);
+                }}
+                className="text-gray-600 hover:text-pink-600 underline"
+              >
+                Terms of Use
+              </button>
+              <span className="text-gray-400">•</span>
+              <button 
+                onClick={() => {
+                  setPolicyType('privacy');
+                  setIsPolicyModalOpen(true);
+                }}
+                className="text-gray-600 hover:text-pink-600 underline"
+              >
+                Privacy Policy
+              </button>
+              <span className="text-gray-400">•</span>
+              <button 
+                onClick={() => {
+                  setPolicyType('refund');
+                  setIsPolicyModalOpen(true);
+                }}
+                className="text-gray-600 hover:text-pink-600 underline"
+              >
+                Refund Policy
+              </button>
+              <span className="text-gray-400">•</span>
+              <button 
+                onClick={() => {
+                  setPolicyType('contact');
+                  setIsPolicyModalOpen(true);
+                }}
+                className="text-gray-600 hover:text-pink-600 underline"
+              >
+                Contact Us
+              </button>
+            </div>
+            
           </div>
         </div>
       </footer>
