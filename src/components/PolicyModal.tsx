@@ -46,21 +46,12 @@ const PolicyModal: React.FC<PolicyModalProps> = ({ isOpen, onClose, type }) => {
       title: 'Refund Policy',
       sections: [
         {
-          heading: '7-Day Satisfaction Guarantee',
-          content: 'We offer a 7-day satisfaction guarantee. If you are not completely satisfied with our prenatal yoga course, you can request a full refund within 7 days of purchase.'
+          heading: 'NO refunfund ',
         },
-        {
-          heading: 'Eligibility for Refund',
-          content: 'To be eligible for a refund, you must request it within 7 days of your purchase date. After 7 days, all sales are final and no refunds will be issued.'
+        all sales are final and no refunds will be issued.'
         },
-        {
-          heading: 'How to Request a Refund',
-          content: 'To request a refund, please email us at prenatlyogaa@gmail.com with your order details and reason for the refund request. We will process your request within 3-5 business days.'
-        },
-        {
-          heading: 'Processing Time',
-          content: 'Once your refund is approved, it will be processed and a credit will automatically be applied to your original method of payment within 5-10 business days.'
-        },
+
+  
         {
           heading: 'Contact Support',
           content: 'For any questions about our refund policy, please contact us at prenatlyogaa@gmail.com or WhatsApp: +917013805271'
