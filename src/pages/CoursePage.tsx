@@ -219,15 +219,6 @@ const CoursePage = () => {
             <Button 
               className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white shadow-lg"
               onClick={() => {
-                // Track Facebook Pixel purchase event
-                if (typeof window !== 'undefined' && window.fbq) {
-                  window.fbq('track', 'InitiateCheckout', {
-                    value: 499,
-                    currency: 'INR',
-                    content_type: 'product',
-                    content_ids: ['prenatal-yoga-course']
-                  });
-                }
                 window.open('https://rzp.io/rzp/prenatal-mom', '_blank');
               }}
             >
@@ -261,15 +252,6 @@ const CoursePage = () => {
                 size="lg"
                 className="w-full md:w-auto bg-gradient-to-r from-blue-500 to-pink-500 hover:from-blue-600 hover:to-pink-600 text-white shadow-xl text-lg py-6"
                 onClick={() => {
-                  // Track Facebook Pixel purchase event
-                  if (typeof window !== 'undefined' && window.fbq) {
-                    window.fbq('track', 'InitiateCheckout', {
-                      value: 499,
-                      currency: 'INR',
-                      content_type: 'product',
-                      content_ids: ['prenatal-yoga-course']
-                    });
-                  }
                   window.open('https://rzp.io/rzp/prenatal-mom', '_blank');
                 }}
               >
