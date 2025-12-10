@@ -13,16 +13,6 @@ const SlideToPayButton: React.FC<SlideToPayButtonProps> = ({ onPayment, classNam
   const sliderRef = useRef<HTMLDivElement>(null);
 
   const handlePayment = () => {
-    // Track Facebook Pixel purchase event
-    if (typeof window !== 'undefined' && window.fbq) {
-      window.fbq('track', 'InitiateCheckout', {
-        value: 499,
-        currency: 'INR',
-        content_type: 'product',
-        content_ids: ['prenatal-yoga-course']
-      });
-    }
-    
     // Redirect to Razorpay
     window.open('https://rzp.io/rzp/prenatal-mom', '_blank');
     
